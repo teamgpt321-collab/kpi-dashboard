@@ -40,6 +40,8 @@ const [keyword,setKeyword]=useState("");
 const [status,setStatus]=useState("Tất cả");
 const [blocksSelected,setBlocksSelected]=useState<string[]>([]);
 const [employeesSelected,setEmployeesSelected]=useState<string[]>([]);
+const [showBlock,setShowBlock]=useState(false);
+const [showEmployee,setShowEmployee]=useState(false);
 
 
 
@@ -47,9 +49,10 @@ const blocks = [
   ...Array.from(new Set(employees.map(emp => emp.block)))
 ];
 
-const employeeNames = [
-  ...Array.from(new Set(employees.map(emp => emp.name)))
-];
+const filteredEmployeeOptions = employees.filter(emp =>
+  blocksSelected.length === 0 ||
+  blocksSelected.includes(emp.block)
+);
 
 
 const filteredEmployees = employees.filter(emp=>{
@@ -137,6 +140,7 @@ Chi tiết KPI nhân sự
 
 
 
+
 <div className="flex gap-4 mb-5">
 
 
@@ -148,46 +152,190 @@ onChange={(e)=>setKeyword(e.target.value)}
 />
 
 
-<select
-multiple
-className="border rounded p-2 w-64"
-value={blocksSelected}
-onChange={(e)=>
+<div className="relative">
+
+<button
+className="border rounded p-2 w-56 text-left bg-white"
+onClick={()=>setShowBlock(!showBlock)}
+>
+{
+blocksSelected.length===0
+?
+"Block: Tất cả"
+:
+`Block (${blocksSelected.length})`
+}
+</button>
+
+
+{
+showBlock &&
+<div className="absolute bg-white border shadow rounded p-3 w-64 z-20">
+
+
+<label className="block mb-2">
+
+<input
+type="checkbox"
+checked={blocksSelected.length===0}
+onChange={()=>{
+setBlocksSelected([]);
+setEmployeesSelected([]);
+}}
+/>
+
+<span className="ml-2">
+Tất cả
+</span>
+
+</label>
+
+
+{
+blocks.map(b=>(
+
+<label
+key={b}
+className="block mb-2"
+>
+
+<input
+type="checkbox"
+checked={blocksSelected.includes(b)}
+onChange={()=>{
+
+if(blocksSelected.includes(b))
+{
 setBlocksSelected(
-Array.from(e.target.selectedOptions)
-.map(x=>x.value)
+blocksSelected.filter(x=>x!==b)
 )
 }
->
+else
+{
+setBlocksSelected(
+[...blocksSelected,b]
+)
+}
 
-{blocks.map(b=>(
-<option key={b} value={b}>
+setEmployeesSelected([]);
+
+}}
+/>
+
+<span className="ml-2">
 {b}
-</option>
-))}
+</span>
 
-</select>
+</label>
 
-
-<select
-multiple
-className="border rounded p-2 w-64"
-value={employeesSelected}
-onChange={(e)=>
-setEmployeesSelected(
-Array.from(e.target.selectedOptions)
-.map(x=>x.value)
-)
+))
 }
+
+
+</div>
+}
+
+
+</div>
+
+
+
+<div className="relative">
+
+
+<button
+className="border rounded p-2 w-56 text-left bg-white"
+onClick={()=>setShowEmployee(!showEmployee)}
 >
 
-{employeeNames.map(name=>(
-<option key={name} value={name}>
-{name}
-</option>
-))}
+{
+employeesSelected.length===0
+?
+"Nhân viên: Tất cả"
+:
+`Nhân viên (${employeesSelected.length})`
+}
 
-</select>
+</button>
+
+
+
+{
+showEmployee &&
+
+<div className="absolute bg-white border shadow rounded p-3 w-64 max-h-80 overflow-auto z-20">
+
+
+<label className="block mb-2">
+
+<input
+type="checkbox"
+checked={employeesSelected.length===0}
+onChange={()=>{
+setEmployeesSelected([]);
+}}
+/>
+
+<span className="ml-2">
+Tất cả
+</span>
+
+</label>
+
+
+
+{
+filteredEmployeeOptions.map(emp=>(
+
+<label
+key={emp.name}
+className="block mb-2"
+>
+
+
+<input
+type="checkbox"
+checked={employeesSelected.includes(emp.name)}
+onChange={()=>{
+
+if(employeesSelected.includes(emp.name))
+{
+setEmployeesSelected(
+employeesSelected.filter(x=>x!==emp.name)
+)
+}
+else
+{
+setEmployeesSelected(
+[...employeesSelected,emp.name]
+)
+}
+
+}}
+/>
+
+
+<span className="ml-2">
+{emp.name}
+</span>
+
+
+</label>
+
+))
+}
+
+
+
+</div>
+
+}
+
+
+
+</div>
+
+
 
 
 <select
@@ -196,22 +344,15 @@ value={status}
 onChange={(e)=>setStatus(e.target.value)}
 >
 
-<option>
-Tất cả
-</option>
-
-<option>
-Tốt
-</option>
-
-<option>
-Cảnh báo
-</option>
+<option>Tất cả</option>
+<option>Tốt</option>
+<option>Cảnh báo</option>
 
 </select>
 
 
 </div>
+
 
 
 
