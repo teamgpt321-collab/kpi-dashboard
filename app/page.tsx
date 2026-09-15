@@ -64,6 +64,14 @@ status==="Tất cả"
 emp.status===status
 )
 
+&&
+
+(
+block==="Tất cả"
+||
+emp.block===block
+)
+
 )
 
 });
