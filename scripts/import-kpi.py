@@ -84,7 +84,23 @@ for _, row in df.iterrows():
         "responseTK": to_number(row["Repontime TK\n(<18H)"]),
         "responseBT": to_number(row["Repontime BT\n(<9h)"]),
 
-        "status": "Cảnh báo" if to_number(row["CLL\n(<7%)"]) * 100 > 7 else "Tốt"
+        "status": "Cảnh báo" if (
+            to_number(row["Đúng Hẹn\n(>=97%)"]) * 100 < 97
+            or
+            to_number(row["CLL\n(<7%)"]) * 100 > 7
+            or
+            to_number(row["CLL3\n(<0.5%)"]) * 100 > 0.5
+            or
+            to_number(row["7N"]) * 100 > 0
+            or
+            to_number(row["TK quá 72H"]) > 0
+            or
+            to_number(row["BT quá 24H"]) > 0
+            or
+            to_number(row["Repontime TK\n(<18H)"]) > 18
+            or
+            to_number(row["Repontime BT\n(<9h)"]) > 9
+        ) else "Tốt"
 
     })
 
@@ -101,6 +117,51 @@ with open(
         ensure_ascii=False,
         indent=2
     ))
+
+
+
+# ===== CREATE SUMMARY.TS =====
+
+total_employees = len(employees)
+
+correct_avg = round(
+    sum(x["correct"] for x in employees) / total_employees,
+    2
+) if total_employees else 0
+
+
+cll_avg = round(
+    sum(x["cll"] for x in employees) / total_employees,
+    2
+) if total_employees else 0
+
+
+warning_count = len([
+    x for x in employees
+    if x["status"] == "Cảnh báo"
+])
+
+
+with open(
+    "data/summary.ts",
+    "w",
+    encoding="utf-8"
+) as f:
+
+    f.write(f"""export const summary = {{
+  totalEmployees: {total_employees},
+  correct: {correct_avg},
+  cll: {cll_avg},
+  warning: {warning_count},
+}};""")
+
+
+print(
+    "Đã tạo summary:",
+    total_employees,
+    "nhân sự | Cảnh báo:",
+    warning_count
+)
 
 
 print("Đã tạo KPI:", len(employees), "nhân sự")
