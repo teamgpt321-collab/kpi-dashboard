@@ -6,16 +6,30 @@ import { summary } from "@/data/summary";
 
 
 function checkKPI(emp:any){
+
   const issues:string[] = [];
 
-  if(emp.kpiFailCount > 0){
-    issues.push(`Có ${emp.kpiFailCount} KPI chưa đạt`);
-  }
+  if(emp.correct < 97)
+    issues.push(`Đúng hẹn ${emp.correct.toFixed(2)}% < 97%`);
+
+  if(emp.cll >= 7)
+    issues.push(`CLL ${emp.cll.toFixed(2)}% >= 7%`);
+
+  if(emp.cll3 >= 0.5)
+    issues.push(`CLL3 ${emp.cll3.toFixed(2)}% >= 0.5%`);
+
+  if(emp.sevenDay > 0)
+    issues.push(`7N ${emp.sevenDay.toFixed(2)}% > 0%`);
+
+  if(emp.responseTK >= 18)
+    issues.push(`Response TK ${emp.responseTK.toFixed(2)}h >= 18h`);
+
+  if(emp.responseBT >= 9)
+    issues.push(`Response BT ${emp.responseBT.toFixed(2)}h >= 9h`);
 
   return issues;
+
 }
-
-
 
 export default function Home(){
 

@@ -124,6 +124,12 @@ for _, row in df.iterrows():
             to_number(row["CLL\n(<7%)"]) * 100 >= 7
             or
             to_number(row["CLL3\n(<0.5%)"]) * 100 >= 0.5
+            or
+            to_number(row["7N"]) * 100 > 0
+            or
+            to_number(row["Repontime TK\n(<18H)"]) >= 18
+            or
+            to_number(row["Repontime BT\n(<9h)"]) >= 9
         ) else "Tốt"
 
     })

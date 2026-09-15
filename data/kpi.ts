@@ -15,7 +15,7 @@ export const employees = [
     "responseTK": 13.6115432098935,
     "responseBT": 21.3425411522686,
     "kpiFailCount": 2,
-    "status": "Tốt"
+    "status": "Cảnh báo"
   },
   {
     "name": "PNC01.TRUNGP",
@@ -33,7 +33,7 @@ export const employees = [
     "responseTK": 19.6334595959792,
     "responseBT": 6.39173611111073,
     "kpiFailCount": 1,
-    "status": "Tốt"
+    "status": "Cảnh báo"
   },
   {
     "name": "PNC01.KIETDV",
@@ -51,7 +51,7 @@ export const employees = [
     "responseTK": 16.6752057613016,
     "responseBT": 11.4769999999786,
     "kpiFailCount": 2,
-    "status": "Tốt"
+    "status": "Cảnh báo"
   },
   {
     "name": "PNC01.KHANGHHG",
@@ -69,7 +69,7 @@ export const employees = [
     "responseTK": 40.9171212121093,
     "responseBT": 7.59898745519627,
     "kpiFailCount": 2,
-    "status": "Tốt"
+    "status": "Cảnh báo"
   },
   {
     "name": "PNC01.DUCNH5",
@@ -159,7 +159,7 @@ export const employees = [
     "responseTK": 10.7118827160351,
     "responseBT": 14.4181906906888,
     "kpiFailCount": 2,
-    "status": "Tốt"
+    "status": "Cảnh báo"
   },
   {
     "name": "PNC01.TRUNGNT26",
@@ -231,7 +231,7 @@ export const employees = [
     "responseTK": 24.3965873015695,
     "responseBT": 21.7598000000138,
     "kpiFailCount": 3,
-    "status": "Tốt"
+    "status": "Cảnh báo"
   },
   {
     "name": "PNC01.QUANGNM1",
@@ -267,7 +267,7 @@ export const employees = [
     "responseTK": 0,
     "responseBT": 22.0761111110332,
     "kpiFailCount": 1,
-    "status": "Tốt"
+    "status": "Cảnh báo"
   },
   {
     "name": "PNC01.DONGTD",
