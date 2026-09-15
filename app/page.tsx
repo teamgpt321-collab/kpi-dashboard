@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { employees } from "@/data/kpi";
 import { summary } from "@/data/summary";
+import { cllDetail } from "@/data/cll-detail";
 
 
 function checkKPI(emp:any){
@@ -34,6 +35,7 @@ function checkKPI(emp:any){
 export default function Home(){
 
 const [selectedEmployee,setSelectedEmployee] = useState<any>(null);
+const [showCLL,setShowCLL]=useState(false);
 
 
 const [keyword,setKeyword]=useState("");
@@ -52,6 +54,29 @@ const blocks = [
 const filteredEmployeeOptions = employees.filter(emp =>
   blocksSelected.length === 0 ||
   blocksSelected.includes(emp.block)
+);
+
+
+
+const cllByEmployee = Object.values(
+  cllDetail.reduce((acc:any,item:any)=>{
+
+    const key=item.employee;
+
+    if(!acc[key]){
+      acc[key]={
+        employee:key,
+        count:0,
+        details:[]
+      };
+    }
+
+    acc[key].count++;
+    acc[key].details.push(item);
+
+    return acc;
+
+  },{})
 );
 
 
@@ -116,6 +141,7 @@ KPI Performance Dashboard
 title="CLL"
 value={`${summary.cll}%`}
 color="text-red-600"
+onClick={()=>setShowCLL(true)}
 />
 
 
@@ -483,6 +509,81 @@ Tốt
 
 
 
+
+{
+showCLL &&
+
+<div className="fixed inset-0 bg-black/40 flex items-center justify-center">
+
+<div className="bg-white rounded-xl p-8 w-[700px] shadow">
+
+<h2 className="text-2xl font-bold mb-5">
+Chi tiết CLL
+</h2>
+
+
+<p className="mb-4">
+Tổng phiếu CLL: {cllDetail.length}
+</p>
+
+
+<table className="w-full border">
+
+<thead>
+<tr className="border-b">
+
+<th className="p-2 text-left">
+Nhân sự
+</th>
+
+<th>
+Số phiếu
+</th>
+
+</tr>
+</thead>
+
+
+<tbody>
+
+{
+cllByEmployee.map((x:any)=>(
+
+<tr key={x.employee} className="border-b">
+
+<td className="p-2">
+{x.employee}
+</td>
+
+<td className="text-center">
+{x.count}
+</td>
+
+</tr>
+
+))
+}
+
+</tbody>
+
+</table>
+
+
+<button
+className="mt-5 bg-black text-white px-5 py-2 rounded"
+onClick={()=>setShowCLL(false)}
+>
+Đóng
+</button>
+
+
+</div>
+
+</div>
+
+}
+
+
 {
 selectedEmployee &&
 
@@ -626,12 +727,16 @@ onClick={()=>setSelectedEmployee(null)}
 function Card({
 title,
 value,
-color="text-black"
+color="text-black",
+onClick
 }:any){
 
 return (
 
-<div className="bg-white rounded-xl p-6 shadow">
+<div
+className="bg-white rounded-xl p-6 shadow cursor-pointer hover:bg-gray-50"
+onClick={onClick}
+>
 
 <p className="text-gray-500">
 {title}
