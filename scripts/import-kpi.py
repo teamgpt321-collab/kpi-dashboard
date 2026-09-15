@@ -63,6 +63,16 @@ for _, row in df.iterrows():
         continue
 
 
+
+    if name == "PNC01.DUCNH5":
+        print("DEBUG DUCNH5")
+        print("correct raw:", row["Đúng Hẹn\n(>=97%)"])
+        print("cll raw:", row["CLL\n(<7%)"])
+        print("cll3 raw:", row["CLL3\n(<0.5%)"])
+        print("correct calc:", to_number(row["Đúng Hẹn\n(>=97%)"]) * 100)
+        print("cll calc:", to_number(row["CLL\n(<7%)"]) * 100)
+        print("cll3 calc:", to_number(row["CLL3\n(<0.5%)"]) * 100)
+
     employees.append({
 
         "name": name,
@@ -91,14 +101,6 @@ for _, row in df.iterrows():
             to_number(row["CLL\n(<7%)"]) * 100 >= 7
             or
             to_number(row["CLL3\n(<0.5%)"]) * 100 >= 0.5
-            or
-            to_number(row["TK quá 72H"]) > 0
-            or
-            to_number(row["BT quá 24H"]) > 0
-            or
-            to_number(row["Repontime TK\n(<18H)"]) >= 18
-            or
-            to_number(row["Repontime BT\n(<9h)"]) >= 9
         ) else "Tốt"
 
     })

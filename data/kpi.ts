@@ -14,7 +14,7 @@ export const employees = [
     "over24h": 7.0,
     "responseTK": 13.6115432098935,
     "responseBT": 21.3425411522686,
-    "status": "Cảnh báo"
+    "status": "Tốt"
   },
   {
     "name": "PNC01.TRUNGP",
@@ -31,7 +31,7 @@ export const employees = [
     "over24h": 1.0,
     "responseTK": 19.6334595959792,
     "responseBT": 6.39173611111073,
-    "status": "Cảnh báo"
+    "status": "Tốt"
   },
   {
     "name": "PNC01.KIETDV",
@@ -48,7 +48,7 @@ export const employees = [
     "over24h": 2.0,
     "responseTK": 16.6752057613016,
     "responseBT": 11.4769999999786,
-    "status": "Cảnh báo"
+    "status": "Tốt"
   },
   {
     "name": "PNC01.KHANGHHG",
@@ -65,7 +65,7 @@ export const employees = [
     "over24h": 0.0,
     "responseTK": 40.9171212121093,
     "responseBT": 7.59898745519627,
-    "status": "Cảnh báo"
+    "status": "Tốt"
   },
   {
     "name": "PNC01.DUCNH5",
@@ -82,7 +82,7 @@ export const employees = [
     "over24h": 1.0,
     "responseTK": 7.61978298611757,
     "responseBT": 7.29412037035218,
-    "status": "Cảnh báo"
+    "status": "Tốt"
   },
   {
     "name": "PNC01.TUONGNQ",
@@ -150,7 +150,7 @@ export const employees = [
     "over24h": 5.0,
     "responseTK": 10.7118827160351,
     "responseBT": 14.4181906906888,
-    "status": "Cảnh báo"
+    "status": "Tốt"
   },
   {
     "name": "PNC01.TRUNGNT26",
@@ -218,7 +218,7 @@ export const employees = [
     "over24h": 6.0,
     "responseTK": 24.3965873015695,
     "responseBT": 21.7598000000138,
-    "status": "Cảnh báo"
+    "status": "Tốt"
   },
   {
     "name": "PNC01.QUANGNM1",
@@ -252,7 +252,7 @@ export const employees = [
     "over24h": 0.0,
     "responseTK": 0,
     "responseBT": 22.0761111110332,
-    "status": "Cảnh báo"
+    "status": "Tốt"
   },
   {
     "name": "PNC01.DONGTD",
