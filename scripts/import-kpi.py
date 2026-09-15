@@ -39,6 +39,8 @@ df = pd.read_excel(
 
 
 employees = []
+
+cll_details = []
 summary_row = None
 
 
@@ -149,6 +151,67 @@ with open(
         ensure_ascii=False,
         indent=2
     ))
+
+
+
+
+
+# ===== CREATE CLL DETAIL =====
+
+import pandas as pd
+
+for sheet in ["1"]:
+
+    df_cll = pd.read_excel(
+        file,
+        sheet_name=sheet,
+        header=0
+    )
+
+    for _, row in df_cll.iterrows():
+
+        employee = row.iloc[7]
+
+        if pd.isna(employee):
+            continue
+
+        cll_details.append({
+
+            "sheet": sheet,
+
+            "employee": str(employee),
+
+            "contract": str(row.iloc[4]),
+
+            "customer": str(row.iloc[5]),
+
+            "createTime": str(row.iloc[9]),
+
+            "finishTime": str(row.iloc[10]),
+
+            "service": str(row.iloc[30]),
+
+            "reason": str(row.iloc[13])
+
+        })
+
+
+with open(
+    "data/cll-detail.ts",
+    "w",
+    encoding="utf-8"
+) as f:
+
+    f.write(
+        "export const cllDetail = "
+        +
+        json.dumps(
+            cll_details,
+            ensure_ascii=False,
+            indent=2
+        )
+    )
+
 
 
 
