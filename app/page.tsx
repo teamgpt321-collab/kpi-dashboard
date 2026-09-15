@@ -35,6 +35,7 @@ function checkKPI(emp:any){
 export default function Home(){
 
 const [selectedEmployee,setSelectedEmployee] = useState<any>(null);
+const [selectedCLLEmployee,setSelectedCLLEmployee] = useState<any>(null);
 const [showCLL,setShowCLL]=useState(false);
 
 
@@ -79,6 +80,19 @@ const cllByEmployee = Object.values(
   },{})
 );
 
+
+
+const selectedCLLDetails =
+selectedCLLEmployee
+?
+cllDetail.filter(
+x =>
+x.employee.toUpperCase()
+===
+selectedCLLEmployee.name.toUpperCase()
+)
+:
+[];
 
 const filteredEmployees = employees.filter(emp=>{
 
@@ -458,7 +472,16 @@ onClick={()=>setSelectedEmployee(emp)}
 </td>
 
 
-<td>
+<td
+className="cursor-pointer text-blue-600 font-bold hover:underline"
+onClick={(e)=>{
+
+e.stopPropagation();
+
+setSelectedCLLEmployee(emp);
+
+}}
+>
 {emp.cll.toFixed(2)}%
 </td>
 
@@ -572,6 +595,103 @@ cllByEmployee.map((x:any)=>(
 <button
 className="mt-5 bg-black text-white px-5 py-2 rounded"
 onClick={()=>setShowCLL(false)}
+>
+Đóng
+</button>
+
+
+</div>
+
+</div>
+
+}
+
+
+
+{
+selectedCLLEmployee &&
+
+<div className="fixed inset-0 bg-black/40 flex items-center justify-center">
+
+<div className="bg-white rounded-xl p-8 w-[900px] shadow">
+
+
+<h2 className="text-2xl font-bold mb-5">
+Chi tiết CLL - {selectedCLLEmployee.name}
+</h2>
+
+
+<p className="mb-4">
+Số phiếu CLL: {selectedCLLDetails.length}
+</p>
+
+
+<table className="w-full border">
+
+<thead>
+
+<tr className="border-b">
+
+<th className="p-2 text-left">
+Số HĐ
+</th>
+
+<th>
+Khách hàng
+</th>
+
+<th>
+Tạo CL
+</th>
+
+<th>
+Hoàn tất
+</th>
+
+</tr>
+
+</thead>
+
+
+<tbody>
+
+{
+selectedCLLDetails.map((x:any)=>(
+
+<tr
+key={x.contract}
+className="border-b"
+>
+
+<td className="p-2">
+{x.contract}
+</td>
+
+<td>
+{x.customer}
+</td>
+
+<td>
+{x.createTime}
+</td>
+
+<td>
+{x.finishTime}
+</td>
+
+</tr>
+
+))
+}
+
+</tbody>
+
+</table>
+
+
+<button
+className="mt-5 bg-black text-white px-5 py-2 rounded"
+onClick={()=>setSelectedCLLEmployee(null)}
 >
 Đóng
 </button>
