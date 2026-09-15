@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { employees } from "@/data/kpi";
 import { summary } from "@/data/summary";
+import DesktopDashboard from "@/components/DesktopDashboard";
+import MobileDashboard from "@/components/MobileDashboard";
 import { cllDetail } from "@/data/cll-detail";
 
 
@@ -397,143 +399,28 @@ onChange={(e)=>setStatus(e.target.value)}
 
 
 
-<table className="w-full table-fixed">
 
-<colgroup>
-<col className="w-[25%]" />
-<col className="w-[18%]" />
-<col className="w-[8%]" />
-<col className="w-[10%]" />
-<col className="w-[10%]" />
-<col className="w-[10%]" />
-<col className="w-[12%]" />
-</colgroup>
+<DesktopDashboard
 
+employees={filteredEmployees}
 
-<thead>
+setSelectedEmployee={setSelectedEmployee}
 
-<tr className="border-b">
+setSelectedCLLEmployee={setSelectedCLLEmployee}
 
-<th className="text-left p-3">
-Nhân sự
-</th>
-
-<th>
-Block
-</th>
-
-<th>
-Đội
-</th>
-
-<th>
-Đúng hẹn
-</th>
-
-<th>
-CLL
-</th>
-
-<th>
-7N
-</th>
-
-<th className="w-[12%] text-center p-3">
-Trạng thái
-</th>
-
-</tr>
-
-</thead>
+/>
 
 
+<MobileDashboard
 
-<tbody>
+employees={filteredEmployees}
 
+setSelectedEmployee={setSelectedEmployee}
 
-{
-filteredEmployees.map(emp=>(
+setSelectedCLLEmployee={setSelectedCLLEmployee}
 
+/>
 
-<tr
-key={emp.name}
-className="border-b hover:bg-gray-100 cursor-pointer"
-onClick={()=>setSelectedEmployee(emp)}
->
-
-
-<td className="p-3 font-bold">
-{emp.name}
-</td>
-
-
-<td className="w-[18%] p-3">
-{emp.block}
-</td>
-
-
-<td className="w-[8%] text-center">
-{emp.team}
-</td>
-
-
-<td className="w-[10%] text-center">
-{emp.correct.toFixed(2)}%
-</td>
-
-
-<td
-className="w-[10%] text-center cursor-pointer text-blue-600 font-bold hover:underline"
-onClick={(e)=>{
-
-e.stopPropagation();
-
-setSelectedCLLEmployee(emp);
-
-}}
->
-{emp.cll.toFixed(2)}%
-</td>
-
-
-<td className="w-[10%] text-center">
-{emp.sevenDay.toFixed(2)}%
-</td>
-
-
-<td className="w-[12%] text-center p-3">
-
-{
-emp.status === "Cảnh báo"
-
-?
-
-<span className="text-red-600 font-bold">
-Cảnh báo
-</span>
-
-:
-
-<span className="text-green-600 font-bold">
-Tốt
-</span>
-
-}
-
-</td>
-
-
-</tr>
-
-
-))
-}
-
-
-</tbody>
-
-
-</table>
 
 
 </div>
