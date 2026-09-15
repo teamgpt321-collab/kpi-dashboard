@@ -1,10 +1,6 @@
 export const summary = {
   totalEmployees: 16,
-
-  correct: 98.51,
-
-  cll: 7.76,
-
+  correct: 97.87,
+  cll: 6.47,
   warning: 8,
 };
-
