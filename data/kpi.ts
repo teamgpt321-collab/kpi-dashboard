@@ -14,6 +14,7 @@ export const employees = [
     "over24h": 7.0,
     "responseTK": 13.6115432098935,
     "responseBT": 21.3425411522686,
+    "kpiFailCount": 2,
     "status": "Tốt"
   },
   {
@@ -31,6 +32,7 @@ export const employees = [
     "over24h": 1.0,
     "responseTK": 19.6334595959792,
     "responseBT": 6.39173611111073,
+    "kpiFailCount": 1,
     "status": "Tốt"
   },
   {
@@ -48,6 +50,7 @@ export const employees = [
     "over24h": 2.0,
     "responseTK": 16.6752057613016,
     "responseBT": 11.4769999999786,
+    "kpiFailCount": 2,
     "status": "Tốt"
   },
   {
@@ -65,6 +68,7 @@ export const employees = [
     "over24h": 0.0,
     "responseTK": 40.9171212121093,
     "responseBT": 7.59898745519627,
+    "kpiFailCount": 2,
     "status": "Tốt"
   },
   {
@@ -82,6 +86,7 @@ export const employees = [
     "over24h": 1.0,
     "responseTK": 7.61978298611757,
     "responseBT": 7.29412037035218,
+    "kpiFailCount": 0,
     "status": "Tốt"
   },
   {
@@ -99,6 +104,7 @@ export const employees = [
     "over24h": 6.0,
     "responseTK": 19.820252525218,
     "responseBT": 16.64381381381,
+    "kpiFailCount": 4,
     "status": "Cảnh báo"
   },
   {
@@ -116,6 +122,7 @@ export const employees = [
     "over24h": 4.0,
     "responseTK": 21.6222222221997,
     "responseBT": 20.2710069444584,
+    "kpiFailCount": 4,
     "status": "Cảnh báo"
   },
   {
@@ -133,6 +140,7 @@ export const employees = [
     "over24h": 11.0,
     "responseTK": 76.0388518518535,
     "responseBT": 27.5739841269945,
+    "kpiFailCount": 3,
     "status": "Cảnh báo"
   },
   {
@@ -150,6 +158,7 @@ export const employees = [
     "over24h": 5.0,
     "responseTK": 10.7118827160351,
     "responseBT": 14.4181906906888,
+    "kpiFailCount": 2,
     "status": "Tốt"
   },
   {
@@ -167,6 +176,7 @@ export const employees = [
     "over24h": 12.0,
     "responseTK": 36.2550138888677,
     "responseBT": 21.190142857132,
+    "kpiFailCount": 3,
     "status": "Cảnh báo"
   },
   {
@@ -184,6 +194,7 @@ export const employees = [
     "over24h": 9.0,
     "responseTK": 35.2488194444632,
     "responseBT": 16.6712643678264,
+    "kpiFailCount": 5,
     "status": "Cảnh báo"
   },
   {
@@ -201,6 +212,7 @@ export const employees = [
     "over24h": 4.0,
     "responseTK": 17.2601666666335,
     "responseBT": 17.9201488095174,
+    "kpiFailCount": 3,
     "status": "Cảnh báo"
   },
   {
@@ -218,6 +230,7 @@ export const employees = [
     "over24h": 6.0,
     "responseTK": 24.3965873015695,
     "responseBT": 21.7598000000138,
+    "kpiFailCount": 3,
     "status": "Tốt"
   },
   {
@@ -235,6 +248,7 @@ export const employees = [
     "over24h": 7.0,
     "responseTK": 16.4689484126866,
     "responseBT": 22.7916880341968,
+    "kpiFailCount": 3,
     "status": "Cảnh báo"
   },
   {
@@ -252,6 +266,7 @@ export const employees = [
     "over24h": 0.0,
     "responseTK": 0,
     "responseBT": 22.0761111110332,
+    "kpiFailCount": 1,
     "status": "Tốt"
   },
   {
@@ -269,6 +284,7 @@ export const employees = [
     "over24h": 5.0,
     "responseTK": 18.7358159721916,
     "responseBT": 25.2174305555236,
+    "kpiFailCount": 5,
     "status": "Cảnh báo"
   }
 ]

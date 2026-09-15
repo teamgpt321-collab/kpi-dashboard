@@ -73,6 +73,27 @@ for _, row in df.iterrows():
         print("cll calc:", to_number(row["CLL\n(<7%)"]) * 100)
         print("cll3 calc:", to_number(row["CLL3\n(<0.5%)"]) * 100)
 
+
+    kpi_fail_count = 0
+
+    if to_number(row["Đúng Hẹn\n(>=97%)"]) * 100 < 97:
+        kpi_fail_count += 1
+
+    if to_number(row["CLL\n(<7%)"]) * 100 >= 7:
+        kpi_fail_count += 1
+
+    if to_number(row["CLL3\n(<0.5%)"]) * 100 >= 0.5:
+        kpi_fail_count += 1
+
+    if to_number(row["7N"]) * 100 > 0:
+        kpi_fail_count += 1
+
+    if to_number(row["Repontime TK\n(<18H)"]) >= 18:
+        kpi_fail_count += 1
+
+    if to_number(row["Repontime BT\n(<9h)"]) >= 9:
+        kpi_fail_count += 1
+
     employees.append({
 
         "name": name,
@@ -94,6 +115,8 @@ for _, row in df.iterrows():
 
         "responseTK": to_number(row["Repontime TK\n(<18H)"]),
         "responseBT": to_number(row["Repontime BT\n(<9h)"]),
+
+        "kpiFailCount": kpi_fail_count,
 
         "status": "Cảnh báo" if (
             to_number(row["Đúng Hẹn\n(>=97%)"]) * 100 < 97
