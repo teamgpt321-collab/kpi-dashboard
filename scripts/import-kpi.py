@@ -39,6 +39,7 @@ df = pd.read_excel(
 
 
 employees = []
+summary_row = None
 
 
 for _, row in df.iterrows():
@@ -55,6 +56,7 @@ for _, row in df.iterrows():
 
     # gặp Tổng đầu tiên thì dừng
     if name == "TỔNG":
+        summary_row = row
         break
 
 
@@ -154,16 +156,30 @@ with open(
 
 total_employees = len(employees)
 
-correct_avg = round(
-    sum(x["correct"] for x in employees) / total_employees,
-    2
-) if total_employees else 0
+if summary_row is not None:
+
+    correct_avg = round(
+        to_number(summary_row["Đúng Hẹn\n(>=97%)"]) * 100,
+        2
+    )
+
+    cll_avg = round(
+        to_number(summary_row["CLL\n(<7%)"]) * 100,
+        2
+    )
+
+else:
+
+    correct_avg = round(
+        sum(x["correct"] for x in employees) / total_employees,
+        2
+    ) if total_employees else 0
 
 
-cll_avg = round(
-    sum(x["cll"] for x in employees) / total_employees,
-    2
-) if total_employees else 0
+    cll_avg = round(
+        sum(x["cll"] for x in employees) / total_employees,
+        2
+    ) if total_employees else 0
 
 
 warning_count = len([
