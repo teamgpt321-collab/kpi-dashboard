@@ -6,32 +6,13 @@ import { summary } from "@/data/summary";
 
 
 function checkKPI(emp:any){
-
   const issues:string[] = [];
 
-
-  if(emp.correct < 97)
-    issues.push(`Đúng hẹn ${emp.correct.toFixed(2)}% < 97%`);
-
-
-  if(emp.cll > 7)
-    issues.push(`CLL ${emp.cll.toFixed(2)}% > 7%`);
-
-
-  if(emp.cll3 > 0.5)
-    issues.push(`CLL3 ${emp.cll3.toFixed(2)}% > 0.5%`);
-
-
-  if(emp.responseTK > 18)
-    issues.push(`Response TK ${emp.responseTK.toFixed(2)}h > 18h`);
-
-
-  if(emp.responseBT > 9)
-    issues.push(`Response BT ${emp.responseBT.toFixed(2)}h > 9h`);
-
+  if(emp.kpiFailCount > 0){
+    issues.push(`Có ${emp.kpiFailCount} KPI chưa đạt`);
+  }
 
   return issues;
-
 }
 
 
@@ -243,7 +224,7 @@ onClick={()=>setSelectedEmployee(emp)}
 <td>
 
 {
-checkKPI(emp).length > 0
+emp.status === "Cảnh báo"
 
 ?
 
@@ -319,7 +300,7 @@ selectedEmployee &&
 
 {
 
-checkKPI(selectedEmployee).length===0
+selectedEmployee.kpiFailCount === 0
 
 ?
 
@@ -340,14 +321,9 @@ checkKPI(selectedEmployee).length===0
 
 <ul className="list-disc ml-5">
 
-{
-checkKPI(selectedEmployee)
-.map((x:string)=>
-<li key={x}>
-{x}
+<li>
+Số KPI chưa đạt: {selectedEmployee.kpiFailCount}
 </li>
-)
-}
 
 </ul>
 
