@@ -399,6 +399,16 @@ onChange={(e)=>setStatus(e.target.value)}
 
 <table className="w-full table-fixed">
 
+<colgroup>
+<col className="w-[25%]" />
+<col className="w-[18%]" />
+<col className="w-[8%]" />
+<col className="w-[10%]" />
+<col className="w-[10%]" />
+<col className="w-[10%]" />
+<col className="w-[12%]" />
+</colgroup>
+
 
 <thead>
 
@@ -491,7 +501,7 @@ setSelectedCLLEmployee(emp);
 </td>
 
 
-<td>
+<td className="w-[12%] text-center p-3">
 
 {
 emp.status === "Cảnh báo"
