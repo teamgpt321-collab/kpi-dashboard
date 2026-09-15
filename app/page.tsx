@@ -38,7 +38,14 @@ const [selectedEmployee,setSelectedEmployee] = useState<any>(null);
 
 const [keyword,setKeyword]=useState("");
 const [status,setStatus]=useState("Tất cả");
+const [block,setBlock]=useState("Tất cả");
 
+
+
+const blocks = [
+  "Tất cả",
+  ...Array.from(new Set(employees.map(emp => emp.block)))
+];
 
 
 const filteredEmployees = employees.filter(emp=>{
@@ -122,6 +129,21 @@ value={keyword}
 onChange={(e)=>setKeyword(e.target.value)}
 />
 
+
+
+<select
+className="border rounded p-2"
+value={block}
+onChange={(e)=>setBlock(e.target.value)}
+>
+
+{blocks.map(b=>(
+<option key={b}>
+{b}
+</option>
+))}
+
+</select>
 
 
 <select
