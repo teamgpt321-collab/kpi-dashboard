@@ -6,6 +6,7 @@ file = "data/Đúng hẹn 22 T04 Q2.xlsx"
 
 
 def to_number(value):
+
     if pd.isna(value) or value == "-":
         return 0
     try:
@@ -87,19 +88,17 @@ for _, row in df.iterrows():
         "status": "Cảnh báo" if (
             to_number(row["Đúng Hẹn\n(>=97%)"]) * 100 < 97
             or
-            to_number(row["CLL\n(<7%)"]) * 100 > 7
+            to_number(row["CLL\n(<7%)"]) * 100 >= 7
             or
-            to_number(row["CLL3\n(<0.5%)"]) * 100 > 0.5
-            or
-            to_number(row["7N"]) * 100 > 0
+            to_number(row["CLL3\n(<0.5%)"]) * 100 >= 0.5
             or
             to_number(row["TK quá 72H"]) > 0
             or
             to_number(row["BT quá 24H"]) > 0
             or
-            to_number(row["Repontime TK\n(<18H)"]) > 18
+            to_number(row["Repontime TK\n(<18H)"]) >= 18
             or
-            to_number(row["Repontime BT\n(<9h)"]) > 9
+            to_number(row["Repontime BT\n(<9h)"]) >= 9
         ) else "Tốt"
 
     })

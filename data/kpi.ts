@@ -226,7 +226,7 @@ export const employees = [
     "team": "Tiên",
     "correct": 97.5,
     "cll": 7.69230769230769,
-    "cll3": 3.44827586206897,
+    "cll3": 3.84615384615385,
     "sevenDayTK": 0.0,
     "sevenDayBT": 0.0,
     "sevenDay": 0.0,
