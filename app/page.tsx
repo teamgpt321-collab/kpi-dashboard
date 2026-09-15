@@ -397,7 +397,7 @@ onChange={(e)=>setStatus(e.target.value)}
 
 
 
-<table className="w-full">
+<table className="w-full table-fixed">
 
 
 <thead>
@@ -457,23 +457,23 @@ onClick={()=>setSelectedEmployee(emp)}
 </td>
 
 
-<td>
+<td className="w-[18%] p-3">
 {emp.block}
 </td>
 
 
-<td>
+<td className="w-[8%] text-center">
 {emp.team}
 </td>
 
 
-<td>
+<td className="w-[10%] text-center">
 {emp.correct.toFixed(2)}%
 </td>
 
 
 <td
-className="cursor-pointer text-blue-600 font-bold hover:underline"
+className="w-[10%] text-center cursor-pointer text-blue-600 font-bold hover:underline"
 onClick={(e)=>{
 
 e.stopPropagation();
@@ -486,7 +486,7 @@ setSelectedCLLEmployee(emp);
 </td>
 
 
-<td>
+<td className="w-[10%] text-center">
 {emp.sevenDay.toFixed(2)}%
 </td>
 
