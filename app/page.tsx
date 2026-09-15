@@ -428,7 +428,7 @@ CLL
 7N
 </th>
 
-<th>
+<th className="w-[12%] text-center p-3">
 Trạng thái
 </th>
 
