@@ -77,8 +77,6 @@ emp.block===block
 });
 
 
-
-
 return (
 
 <main className="min-h-screen bg-gray-100 p-8">
@@ -129,7 +127,6 @@ Chi tiết KPI nhân sự
 
 <div className="flex gap-4 mb-5">
 
-
 <input
 className="border rounded p-2 flex-1"
 placeholder="Tìm nhân sự..."
@@ -138,7 +135,6 @@ onChange={(e)=>setKeyword(e.target.value)}
 />
 
 
-
 <select
 className="border rounded p-2"
 value={block}
@@ -146,24 +142,11 @@ onChange={(e)=>setBlock(e.target.value)}
 >
 
 {blocks.map(b=>(
-<option key={b}>
+<option key={b} value={b}>
 {b}
 </option>
 ))}
 
-</select>
-
-
-<select
-className="border rounded p-2"
-value={block}
-onChange={(e)=>setBlock(e.target.value)}
->
-{blocks.map(b=>(
-<option key={b}>
-{b}
-</option>
-))}
 </select>
 
 
@@ -173,15 +156,15 @@ value={status}
 onChange={(e)=>setStatus(e.target.value)}
 >
 
-<option>
+<option value="Tất cả">
 Tất cả
 </option>
 
-<option>
+<option value="Tốt">
 Tốt
 </option>
 
-<option>
+<option value="Cảnh báo">
 Cảnh báo
 </option>
 
