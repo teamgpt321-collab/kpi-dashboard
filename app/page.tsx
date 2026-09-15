@@ -378,6 +378,14 @@ Response TK: {selectedEmployee.responseTK.toFixed(2)}h
 Response BT: {selectedEmployee.responseBT.toFixed(2)}h
 </p>
 
+<p>
+TK quá 72H: {selectedEmployee.over72h}
+</p>
+
+<p>
+BT quá 24H: {selectedEmployee.over24h}
+</p>
+
 
 
 <button
