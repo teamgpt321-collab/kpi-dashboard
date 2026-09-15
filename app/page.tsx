@@ -148,6 +148,19 @@ onChange={(e)=>setBlock(e.target.value)}
 
 <select
 className="border rounded p-2"
+value={block}
+onChange={(e)=>setBlock(e.target.value)}
+>
+{blocks.map(b=>(
+<option key={b}>
+{b}
+</option>
+))}
+</select>
+
+
+<select
+className="border rounded p-2"
 value={status}
 onChange={(e)=>setStatus(e.target.value)}
 >
