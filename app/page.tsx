@@ -38,13 +38,17 @@ const [selectedEmployee,setSelectedEmployee] = useState<any>(null);
 
 const [keyword,setKeyword]=useState("");
 const [status,setStatus]=useState("Tất cả");
-const [block,setBlock]=useState("Tất cả");
+const [blocksSelected,setBlocksSelected]=useState<string[]>([]);
+const [employeesSelected,setEmployeesSelected]=useState<string[]>([]);
 
 
 
 const blocks = [
-  "Tất cả",
   ...Array.from(new Set(employees.map(emp => emp.block)))
+];
+
+const employeeNames = [
+  ...Array.from(new Set(employees.map(emp => emp.name)))
 ];
 
 
@@ -67,9 +71,17 @@ emp.status===status
 &&
 
 (
-block==="Tất cả"
+blocksSelected.length === 0
 ||
-emp.block===block
+blocksSelected.includes(emp.block)
+)
+
+&&
+
+(
+employeesSelected.length === 0
+||
+employeesSelected.includes(emp.name)
 )
 
 )
@@ -127,6 +139,7 @@ Chi tiết KPI nhân sự
 
 <div className="flex gap-4 mb-5">
 
+
 <input
 className="border rounded p-2 flex-1"
 placeholder="Tìm nhân sự..."
@@ -136,9 +149,15 @@ onChange={(e)=>setKeyword(e.target.value)}
 
 
 <select
-className="border rounded p-2"
-value={block}
-onChange={(e)=>setBlock(e.target.value)}
+multiple
+className="border rounded p-2 w-64"
+value={blocksSelected}
+onChange={(e)=>
+setBlocksSelected(
+Array.from(e.target.selectedOptions)
+.map(x=>x.value)
+)
+}
 >
 
 {blocks.map(b=>(
@@ -151,20 +170,41 @@ onChange={(e)=>setBlock(e.target.value)}
 
 
 <select
+multiple
+className="border rounded p-2 w-64"
+value={employeesSelected}
+onChange={(e)=>
+setEmployeesSelected(
+Array.from(e.target.selectedOptions)
+.map(x=>x.value)
+)
+}
+>
+
+{employeeNames.map(name=>(
+<option key={name} value={name}>
+{name}
+</option>
+))}
+
+</select>
+
+
+<select
 className="border rounded p-2"
 value={status}
 onChange={(e)=>setStatus(e.target.value)}
 >
 
-<option value="Tất cả">
+<option>
 Tất cả
 </option>
 
-<option value="Tốt">
+<option>
 Tốt
 </option>
 
-<option value="Cảnh báo">
+<option>
 Cảnh báo
 </option>
 
