@@ -6,23 +6,19 @@ export default function MobileDashboard({
   setSelectedCLLEmployee
 }: any) {
 
-
   return (
 
     <div className="md:hidden space-y-4">
 
+      {employees.map((emp:any)=>{
 
-      {
-        employees.map((emp:any)=>{
-
-
-          const isGood =
-            emp.correct >= 97 &&
-            emp.cll < 7 &&
-            emp.sevenDay <= 0;
+        const warning =
+          emp.correct < 97 ||
+          emp.cll >= 7 ||
+          emp.sevenDay > 0;
 
 
-          return (
+        return (
 
           <div
             key={emp.name}
@@ -32,43 +28,52 @@ export default function MobileDashboard({
               rounded-3xl
               p-5
               shadow-sm
-              active:scale-[0.98]
-              transition
-              cursor-pointer
+              border
+              border-gray-100
             "
           >
 
 
             {/* Header */}
 
-            <div className="flex justify-between items-start">
+            <div className="
+              flex
+              justify-between
+              items-start
+            ">
 
 
               <div>
 
-                <h2 className="
-                  font-bold
+                <h3
+                className="
                   text-base
+                  font-bold
                   text-gray-900
-                ">
+                "
+                >
                   {emp.name}
-                </h2>
+                </h3>
 
 
-                <p className="
-                  text-xs
+                <p
+                className="
+                  text-sm
                   text-gray-500
                   mt-1
-                ">
+                "
+                >
                   {emp.block}
                 </p>
 
 
-                <p className="
+                <p
+                className="
                   text-xs
                   text-gray-400
                   mt-1
-                ">
+                "
+                >
                   Đội {emp.team}
                 </p>
 
@@ -83,22 +88,24 @@ export default function MobileDashboard({
                 rounded-full
                 text-xs
                 font-semibold
+
                 ${
-                  isGood
+                  warning
                   ?
-                  "bg-green-100 text-green-700"
+                  "bg-red-50 text-red-600"
                   :
-                  "bg-red-100 text-red-700"
+                  "bg-green-50 text-green-600"
                 }
+
               `}
               >
 
               {
-                isGood
+                warning
                 ?
-                "Tốt"
-                :
                 "Cảnh báo"
+                :
+                "Tốt"
               }
 
               </span>
@@ -110,36 +117,37 @@ export default function MobileDashboard({
 
             {/* KPI */}
 
-            <div className="
+            <div
+            className="
               grid
               grid-cols-3
               gap-3
               mt-5
-            ">
+            "
+            >
 
 
-              <KpiBox
-                title="Đúng hẹn"
-                value={`${emp.correct.toFixed(0)}%`}
-                good={emp.correct>=97}
+              <KPI
+              title="Đúng hẹn"
+              value={`${emp.correct.toFixed(2)}%`}
               />
 
 
-              <KpiBox
-                title="CLL"
-                value={`${emp.cll.toFixed(2)}%`}
-                good={emp.cll<7}
-                onClick={(e:any)=>{
-                  e.stopPropagation();
-                  setSelectedCLLEmployee(emp);
-                }}
+              <KPI
+              title="CLL"
+              value={`${emp.cll.toFixed(2)}%`}
+              danger={emp.cll>=7}
+              onClick={(e:any)=>{
+                e.stopPropagation();
+                setSelectedCLLEmployee(emp);
+              }}
               />
 
 
-              <KpiBox
-                title="7N"
-                value={`${emp.sevenDay.toFixed(2)}%`}
-                good={emp.sevenDay<=0}
+              <KPI
+              title="7N"
+              value={`${emp.sevenDay.toFixed(2)}%`}
+              danger={emp.sevenDay>0}
               />
 
 
@@ -152,60 +160,52 @@ export default function MobileDashboard({
             <div className="mt-5">
 
 
-              <div className="
+              <div
+              className="
                 flex
                 justify-between
                 text-xs
                 text-gray-500
                 mb-2
-              ">
+              "
+              >
 
                 <span>
                   Hiệu suất KPI
                 </span>
 
                 <span>
-                  {
-                    isGood
-                    ?
-                    "100%"
-                    :
-                    "Cần cải thiện"
-                  }
+                  {warning ? "Cần cải thiện":"Đạt"}
                 </span>
 
               </div>
 
 
-
-              <div className="
+              <div
+              className="
                 h-2
-                rounded-full
                 bg-gray-100
+                rounded-full
                 overflow-hidden
-              ">
+              "
+              >
 
                 <div
-                  className={`
-                    h-full
-                    rounded-full
-                    ${
-                      isGood
-                      ?
-                      "bg-green-500"
-                      :
-                      "bg-red-500"
-                    }
-                  `}
-                  style={{
-                    width:
-                    isGood
+                className={`
+                  h-full
+                  rounded-full
+
+                  ${
+                    warning
                     ?
-                    "100%"
+                    "bg-red-500 w-[65%]"
                     :
-                    "65%"
-                  }}
+                    "bg-green-500 w-full"
+                  }
+
+                `}
                 />
+
 
               </div>
 
@@ -214,25 +214,24 @@ export default function MobileDashboard({
 
 
 
-            <div className="
-              mt-4
+            <div
+            className="
               text-center
               text-blue-600
               text-sm
               font-medium
-            ">
+              mt-4
+            "
+            >
               Xem chi tiết →
             </div>
 
 
-
           </div>
 
+        )
 
-          )
-
-        })
-      }
+      })}
 
 
     </div>
@@ -243,11 +242,11 @@ export default function MobileDashboard({
 
 
 
-function KpiBox({
-  title,
-  value,
-  good,
-  onClick
+function KPI({
+title,
+value,
+danger,
+onClick
 }:any){
 
 
@@ -263,26 +262,30 @@ text-center
 "
 >
 
-<p className="
+<p
+className="
 text-xs
 text-gray-500
-">
+"
+>
 {title}
 </p>
 
 
 <p
 className={`
-mt-1
 font-bold
 text-lg
+mt-1
+
 ${
-good
+danger
 ?
-"text-gray-900"
-:
 "text-red-600"
+:
+"text-gray-900"
 }
+
 `}
 >
 {value}
@@ -290,6 +293,7 @@ good
 
 
 </div>
+
 
 )
 
