@@ -1,65 +1,29 @@
 import { NextResponse } from "next/server";
-import fs from "fs";
-import path from "path";
+import { supabase } from "@/lib/supabase";
 
 
 export async function GET() {
 
     try {
 
-        const historyPath = path.join(
-            process.cwd(),
-            "telebot/data/usage_history.json"
-        );
+        const { data: history, error } =
+            await supabase
+                .from("tool_usage")
+                .select("*")
+                .order("time", {
+                    ascending: false
+                });
 
 
-        const userPath = path.join(
-            process.cwd(),
-            "telebot/data/telegram_users.json"
-        );
+        if(error){
 
-
-        const history = JSON.parse(
-            fs.readFileSync(
-                historyPath,
-                "utf8"
-            )
-        );
-
-
-        let userMap:any = {};
-
-
-        if (fs.existsSync(userPath)) {
-
-            const telegramUsers = JSON.parse(
-                fs.readFileSync(
-                    userPath,
-                    "utf8"
-                )
-            );
-
-
-            telegramUsers.forEach(
-                (u:any)=> {
-
-                    userMap[String(u.id)] =
-                        u.name ||
-                        (
-                            u.username
-                            ? "@" + u.username
-                            : u.id
-                        );
-
-                }
-            );
+            throw error;
 
         }
 
 
-
         const cleanHistory =
-            history
+            (history || [])
             .filter(
                 (x:any)=>
                     x.user &&
@@ -71,24 +35,23 @@ export async function GET() {
                     ...x,
 
                     userName:
-                        userMap[String(x.user)]
-                        || x.user
+                        x.userName ||
+                        x.user
 
                 })
-            )
-            .reverse();
+            );
 
 
 
         // =========================
-        // THỐNG KÊ THEO TOOL ĐỘNG
+        // THỐNG KÊ TOOL
         // =========================
 
         const toolStats:any = {};
 
 
-        history.forEach(
-            (item:any)=> {
+        cleanHistory.forEach(
+            (item:any)=>{
 
                 const tool =
                     item.tool || "unknown";
@@ -123,19 +86,19 @@ export async function GET() {
 
 
         // =========================
-        // THỐNG KÊ THEO NGÀY
+        // THEO NGÀY
         // =========================
 
         const dailyMap:any = {};
 
 
         cleanHistory.forEach(
-            (item:any)=> {
-
+            (item:any)=>{
 
                 const date =
-                    item.time.split(" ")[0];
-
+                    item.time
+                    .split("T")[0]
+                    .split(" ")[0];
 
 
                 if(!dailyMap[date]){
@@ -145,7 +108,6 @@ export async function GET() {
                     };
 
                 }
-
 
 
                 const tool =
@@ -161,7 +123,6 @@ export async function GET() {
 
                 dailyMap[date][tool]++;
 
-
             }
         );
 
@@ -172,7 +133,7 @@ export async function GET() {
             summary: {
 
                 total:
-                    history.length,
+                    cleanHistory.length,
 
 
                 tools:
@@ -195,9 +156,8 @@ export async function GET() {
         });
 
 
-
-    } catch(error:any){
-
+    }
+    catch(error:any){
 
         console.error(
             "TOOL USAGE ERROR:",
