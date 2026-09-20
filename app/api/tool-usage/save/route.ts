@@ -1,7 +1,5 @@
 import { NextResponse } from "next/server";
-
 import { supabase } from "@/lib/supabase";
-
 
 
 export async function POST(
@@ -10,9 +8,7 @@ export async function POST(
 
     try {
 
-
         const body = await request.json();
-
 
 
         const {
@@ -25,18 +21,18 @@ export async function POST(
 
 
 
-        if(
+        if (
             !tool ||
             !user ||
             !shd
-        ){
+        ) {
 
             return NextResponse.json(
                 {
-                    error:"Missing data"
+                    error: "Missing data"
                 },
                 {
-                    status:400
+                    status: 400
                 }
             );
 
@@ -48,16 +44,16 @@ export async function POST(
 
             tool,
 
-            user:String(user),
+            user: String(user),
 
             shd,
 
             time:
                 time ||
                 new Date()
-                .toISOString()
-                .replace("T"," ")
-                .substring(0,19),
+                    .toISOString()
+                    .replace("T", " ")
+                    .substring(0, 19),
 
             result:
                 result ||
@@ -67,27 +63,43 @@ export async function POST(
 
 
 
-        const { error } =
-            await supabase
+        console.log(
+            "INSERT DATA:",
+            data
+        );
+
+
+        console.log(
+            "SUPABASE URL:",
+            process.env.SUPABASE_URL
+        );
+
+
+        const {
+            data: inserted,
+            error
+        } = await supabase
             .from("tool_usage")
-            .insert(data);
+            .insert(data)
+            .select();
 
 
 
-        if(error){
+        if (error) {
 
             console.error(
-                "SUPABASE INSERT ERROR:",
+                "SUPABASE ERROR:",
                 error
             );
 
 
             return NextResponse.json(
                 {
-                    error:error.message
+                    error: error.message,
+                    details: error
                 },
                 {
-                    status:500
+                    status: 500
                 }
             );
 
@@ -95,18 +107,16 @@ export async function POST(
 
 
 
-        return NextResponse.json({
-
-            success:true,
-
-            data
-
-        });
-
+        return NextResponse.json(
+            {
+                success: true,
+                data: inserted
+            }
+        );
 
 
     }
-    catch(error:any){
+    catch (error: any) {
 
 
         console.error(
@@ -115,12 +125,19 @@ export async function POST(
         );
 
 
+        console.error(
+            "CAUSE:",
+            error?.cause
+        );
+
+
         return NextResponse.json(
             {
-                error:error.message
+                error: error.message,
+                cause: String(error?.cause)
             },
             {
-                status:500
+                status: 500
             }
         );
 

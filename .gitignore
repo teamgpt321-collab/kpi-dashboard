@@ -56,3 +56,5 @@ __pycache__/
 
 .~lock*
 telebot/data/usage_history.json
+telebot/tools/bypass/history.json
+telebot/tools/bypass/history.json
