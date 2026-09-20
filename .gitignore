@@ -55,3 +55,4 @@ __pycache__/
 *.xlsx
 
 .~lock*
+telebot/data/usage_history.json

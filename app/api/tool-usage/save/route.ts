@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
-import fs from "fs";
-import path from "path";
+
+import { supabase } from "@/lib/supabase";
+
 
 
 export async function POST(
@@ -9,7 +10,9 @@ export async function POST(
 
     try {
 
+
         const body = await request.json();
+
 
 
         const {
@@ -41,31 +44,7 @@ export async function POST(
 
 
 
-        const filePath = path.join(
-            process.cwd(),
-            "telebot/data/usage_history.json"
-        );
-
-
-
-        let history:any[] = [];
-
-
-
-        if(fs.existsSync(filePath)){
-
-            history = JSON.parse(
-                fs.readFileSync(
-                    filePath,
-                    "utf8"
-                )
-            );
-
-        }
-
-
-
-        history.push({
+        const data = {
 
             tool,
 
@@ -84,26 +63,43 @@ export async function POST(
                 result ||
                 "success"
 
-        });
+        };
 
 
 
+        const { error } =
+            await supabase
+            .from("tool_usage")
+            .insert(data);
 
-        fs.writeFileSync(
-            filePath,
-            JSON.stringify(
-                history,
-                null,
-                2
-            ),
-            "utf8"
-        );
+
+
+        if(error){
+
+            console.error(
+                "SUPABASE INSERT ERROR:",
+                error
+            );
+
+
+            return NextResponse.json(
+                {
+                    error:error.message
+                },
+                {
+                    status:500
+                }
+            );
+
+        }
 
 
 
         return NextResponse.json({
 
-            success:true
+            success:true,
+
+            data
 
         });
 
