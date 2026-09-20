@@ -1,0 +1,174 @@
+import asyncio
+
+
+from telebot.sessions.state import (
+    set_state,
+    get_state,
+    clear_state
+)
+
+
+from telebot.tools.bypass.bypass import run
+
+
+from telebot.tools.osp.osp_queue import add_osp_job
+
+
+from telebot.usage_log import save_usage
+
+
+
+BOT = None
+
+
+
+
+async def start_bypass(update, context):
+
+    user_id = update.message.from_user.id
+
+
+    set_state(
+        user_id,
+        {
+            "action": "bypass"
+        }
+    )
+
+
+    await update.message.reply_text(
+        "🔧 Bypass\n\n"
+        "Nhập số hợp đồng SHĐ:"
+    )
+
+
+
+
+
+async def execute_bypass(
+    user_id,
+    shd
+):
+
+    await BOT.send_message(
+        user_id,
+        f"🚀 Bắt đầu Bypass\nSHĐ: {shd}"
+    )
+
+
+    try:
+
+
+        result = await asyncio.to_thread(
+            run,
+            shd,
+            user_id
+        )
+
+
+        save_usage(
+            tool="bypass",
+            user=user_id,
+            shd=shd,
+            result="success"
+        )
+
+
+        await BOT.send_message(
+            user_id,
+            f"✅ Bypass hoàn tất\n\n{result}"
+        )
+
+
+
+    except Exception as e:
+
+
+        save_usage(
+            tool="bypass",
+            user=user_id,
+            shd=shd,
+            result="failed"
+        )
+
+
+        await BOT.send_message(
+            user_id,
+            f"❌ Bypass lỗi\n\n{e}"
+        )
+
+
+
+
+
+async def receive_bypass(update, context):
+
+    global BOT
+
+
+    BOT = context.bot
+
+
+    user_id = update.message.from_user.id
+
+
+    state = get_state(
+        user_id
+    )
+
+
+    if not state:
+        return
+
+
+
+    if state.get("action") != "bypass":
+        return
+
+
+
+
+    text = update.message.text.strip()
+
+
+
+    if text.lower() in [
+        "bypass",
+        "🛠 bypass",
+        "🔧 bypass"
+    ]:
+
+
+        await update.message.reply_text(
+            "🔧 Bypass\n\n"
+            "Nhập số hợp đồng SHĐ:"
+        )
+
+
+        return
+
+
+
+
+    shd = text
+
+
+
+    clear_state(
+        user_id
+    )
+
+
+
+    position = await add_osp_job(
+        user_id,
+        shd,
+        execute_bypass
+    )
+
+
+
+    await update.message.reply_text(
+        f"📥 Đã nhận SHĐ: {shd}\n\n"
+        f"⏳ Vị trí hàng đợi: {position}"
+    )

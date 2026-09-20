@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=KPI Dashboard
+Comment=Open KPI Dashboard
+Exec=google-chrome http://localhost:3000
+Icon=google-chrome
+Terminal=false
+Categories=Development;

@@ -1,0 +1,151 @@
+import json
+from pathlib import Path
+from datetime import datetime
+
+
+from supabase import create_client
+
+
+from telebot.supabase_config import (
+    SUPABASE_URL,
+    SUPABASE_KEY
+)
+
+
+
+FILE = Path(
+    "telebot/data/usage_history.json"
+)
+
+
+
+supabase = create_client(
+    SUPABASE_URL,
+    SUPABASE_KEY
+)
+
+
+
+
+
+def load_usage():
+
+    if not FILE.exists():
+        return []
+
+
+    try:
+
+        return json.loads(
+            FILE.read_text(
+                encoding="utf-8"
+            )
+        )
+
+
+    except Exception:
+
+        return []
+
+
+
+
+
+
+
+def save_usage(
+    tool,
+    user,
+    shd,
+    result
+):
+
+    now = datetime.now()
+
+
+    time_text = now.strftime(
+        "%Y-%m-%d %H:%M:%S"
+    )
+
+
+
+    data = {
+
+        "tool": tool,
+
+        "user": str(user),
+
+        "shd": shd,
+
+        "time": time_text,
+
+        "result": result
+
+    }
+
+
+
+
+    # =========================
+    # LƯU SUPABASE ONLINE
+    # =========================
+
+    try:
+
+        supabase.table(
+            "tool_usage"
+        ).insert(
+            data
+        ).execute()
+
+
+        print(
+            "Saved Supabase:",
+            data
+        )
+
+
+    except Exception as e:
+
+
+        print(
+            "Supabase save error:",
+            e
+        )
+
+
+
+
+
+
+    # =========================
+    # LƯU JSON LOCAL BACKUP
+    # =========================
+
+    try:
+
+        history = load_usage()
+
+
+        history.append(
+            data
+        )
+
+
+        FILE.write_text(
+            json.dumps(
+                history,
+                ensure_ascii=False,
+                indent=2
+            ),
+            encoding="utf-8"
+        )
+
+
+    except Exception as e:
+
+
+        print(
+            "Local log error:",
+            e
+        )

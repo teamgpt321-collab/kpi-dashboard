@@ -1,0 +1,58 @@
+import json
+from pathlib import Path
+from datetime import datetime
+
+
+FILE = Path(
+    "telebot/data/usage_history.json"
+)
+
+
+def load_usage():
+
+    if not FILE.exists():
+        return []
+
+    try:
+        return json.loads(
+            FILE.read_text(
+                encoding="utf-8"
+            )
+        )
+
+    except Exception:
+        return []
+
+
+
+def save_usage(
+    tool,
+    user,
+    shd,
+    result
+):
+
+    data = load_usage()
+
+
+    data.append(
+        {
+            "tool": tool,
+            "user": str(user),
+            "shd": shd,
+            "time": datetime.now().strftime(
+                "%Y-%m-%d %H:%M:%S"
+            ),
+            "result": result
+        }
+    )
+
+
+    FILE.write_text(
+        json.dumps(
+            data,
+            ensure_ascii=False,
+            indent=2
+        ),
+        encoding="utf-8"
+    )

@@ -1,0 +1,840 @@
+"use client";
+
+import { useEffect, useMemo, useState } from "react";
+
+import {
+    BarChart,
+    Bar,
+    XAxis,
+    YAxis,
+    Tooltip,
+    ResponsiveContainer,
+    Legend
+} from "recharts";
+
+
+export default function ToolUsagePage(){
+
+    const [data,setData] = useState<any>(null);
+
+    const [tool,setTool] = useState("all");
+    const [user,setUser] = useState("all");
+
+    const [fromDate,setFromDate] = useState("");
+    const [toDate,setToDate] = useState("");
+
+
+
+    useEffect(()=>{
+
+        fetch("/api/tool-usage")
+        .then(res=>res.json())
+        .then(result=>{
+            setData(result);
+        })
+
+    },[]);
+
+
+
+    const history = data?.history || [];
+
+
+
+    const users = useMemo(()=>{
+
+        return [
+            "all",
+            ...Array.from(
+                new Set(
+                    history.map(
+                        (x:any)=>x.userName
+                    )
+                )
+            )
+        ];
+
+    },[history]);
+
+
+
+
+    const filteredHistory = useMemo(()=>{
+
+
+        return history.filter(
+            (item:any)=>{
+
+
+                const date =
+                    item.time.substring(0,10);
+
+
+
+                return (
+
+                    (
+                        tool==="all"
+                        ||
+                        item.tool===tool
+                    )
+
+
+                    &&
+
+
+                    (
+                        user==="all"
+                        ||
+                        item.userName===user
+                    )
+
+
+                    &&
+
+
+                    (
+                        !fromDate
+                        ||
+                        date>=fromDate
+                    )
+
+
+                    &&
+
+
+                    (
+                        !toDate
+                        ||
+                        date<=toDate
+                    )
+
+                );
+
+
+            }
+        );
+
+
+    },[
+        history,
+        tool,
+        user,
+        fromDate,
+        toDate
+    ]);
+
+
+
+
+    const summary = {
+
+        total:
+        filteredHistory.length,
+
+
+        bypass:
+        filteredHistory.filter(
+            (x:any)=>x.tool==="bypass"
+        ).length,
+
+
+        osp:
+        filteredHistory.filter(
+            (x:any)=>x.tool==="osp"
+        ).length,
+
+
+        users:
+        new Set(
+            filteredHistory.map(
+                (x:any)=>x.userName
+            )
+        ).size
+
+    };
+
+
+
+
+
+    const topUsers = Object.values(
+
+        filteredHistory.reduce(
+            (acc:any,item:any)=>{
+
+
+                if(!acc[item.userName]){
+
+                    acc[item.userName]={
+                        name:item.userName,
+                        count:0
+                    }
+
+                }
+
+
+                acc[item.userName].count++;
+
+
+                return acc;
+
+
+            },
+            {}
+
+        )
+
+    )
+    .sort(
+        (a:any,b:any)=>
+        b.count-a.count
+    );
+
+
+
+
+
+
+    const chartData =
+    Object.values(
+
+        filteredHistory.reduce(
+            (acc:any,item:any)=>{
+
+
+                const date =
+                    item.time.substring(0,10);
+
+
+
+                if(!acc[date]){
+
+                    acc[date]={
+                        date,
+                        bypass:0,
+                        osp:0
+                    }
+
+                }
+
+
+
+                if(item.tool==="bypass")
+                    acc[date].bypass++;
+
+
+                if(item.tool==="osp")
+                    acc[date].osp++;
+
+
+
+                return acc;
+
+
+            },
+            {}
+
+        )
+
+    );
+
+
+
+
+
+    if(!data){
+
+        return (
+
+            <div className="p-10 text-slate-500">
+
+                Loading dashboard...
+
+            </div>
+
+        )
+
+    }
+
+
+
+
+return (
+
+<main className="
+min-h-screen
+bg-[#f5f8ff]
+p-8
+">
+
+
+<div className="mb-8">
+
+<h1 className="
+text-3xl
+font-bold
+text-slate-800
+">
+
+Tool Usage Dashboard
+
+</h1>
+
+
+<p className="
+text-slate-500
+mt-2
+">
+
+Theo dõi sử dụng ByPass và OSP
+
+</p>
+
+</div>
+
+
+
+
+
+<div className="
+grid
+grid-cols-4
+gap-5
+mb-8
+">
+
+
+<Card
+title="Tổng lượt chạy"
+value={summary.total}
+icon="⚡"
+/>
+
+
+<Card
+title="ByPass"
+value={summary.bypass}
+icon="🔵"
+/>
+
+
+<Card
+title="OSP"
+value={summary.osp}
+icon="🟣"
+/>
+
+
+<Card
+title="Nhân sự"
+value={summary.users}
+icon="👤"
+/>
+
+
+</div>
+
+
+
+
+
+
+
+<div className="
+bg-white
+rounded-3xl
+border
+border-slate-100
+shadow-sm
+p-6
+mb-8
+">
+
+
+<h2 className="
+font-bold
+text-lg
+mb-5
+">
+
+🔎 Bộ lọc
+
+</h2>
+
+
+
+<div className="
+grid
+grid-cols-4
+gap-5
+">
+
+
+<select
+className="input"
+value={tool}
+onChange={
+e=>setTool(e.target.value)
+}
+>
+
+<option value="all">
+Tất cả tool
+</option>
+
+<option value="bypass">
+ByPass
+</option>
+
+<option value="osp">
+OSP
+</option>
+
+</select>
+
+
+
+
+<select
+className="input"
+value={user}
+onChange={
+e=>setUser(e.target.value)
+}
+>
+
+{
+users.map(
+(u:any)=>(
+
+<option
+key={u}
+value={u}
+>
+
+{
+u==="all"
+?
+"Tất cả nhân sự"
+:
+u
+}
+
+</option>
+
+)
+
+)
+}
+
+</select>
+
+
+
+<input
+className="input"
+type="date"
+value={fromDate}
+onChange={
+e=>setFromDate(e.target.value)
+}
+/>
+
+
+
+<input
+className="input"
+type="date"
+value={toDate}
+onChange={
+e=>setToDate(e.target.value)
+}
+/>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div className="
+grid
+grid-cols-3
+gap-6
+mb-8
+">
+
+
+
+<div className="
+bg-white
+rounded-3xl
+border
+p-6
+">
+
+
+<h2 className="
+font-bold
+mb-5
+">
+
+🏆 Top người dùng
+
+</h2>
+
+
+
+{
+topUsers.slice(0,5)
+.map(
+(u:any,i)=>(
+
+
+<div
+key={u.name}
+className="
+flex
+justify-between
+py-3
+border-b
+"
+>
+
+
+<span>
+
+{i+1}. {u.name}
+
+</span>
+
+
+<b>
+
+{u.count}
+
+</b>
+
+
+</div>
+
+
+)
+
+)
+}
+
+
+</div>
+
+
+
+
+
+
+
+<div className="
+col-span-2
+bg-white
+rounded-3xl
+border
+p-6
+overflow-hidden
+">
+
+
+<h2 className="
+font-bold
+mb-5
+">
+
+📋 Lịch sử sử dụng
+
+</h2>
+
+
+
+<table className="w-full">
+
+
+<thead>
+
+<tr className="
+bg-slate-50
+text-slate-500
+"
+>
+
+
+<th className="p-4 text-left">
+Tool
+</th>
+
+
+<th className="text-left">
+Nhân sự
+</th>
+
+
+<th className="text-left">
+SHD
+</th>
+
+
+<th className="text-left">
+Thời gian
+</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+<tbody>
+
+
+{
+filteredHistory.map(
+(item:any,index:number)=>(
+
+
+<tr
+key={index}
+className="
+border-b
+hover:bg-blue-50/50
+"
+>
+
+
+<td className="p-4">
+
+
+<span className={`
+px-3
+py-1
+rounded-full
+text-xs
+font-semibold
+
+${
+item.tool==="bypass"
+?
+"bg-blue-100 text-blue-700"
+:
+"bg-purple-100 text-purple-700"
+}
+
+`}
+>
+
+{item.tool}
+
+</span>
+
+
+</td>
+
+
+<td>
+{item.userName}
+</td>
+
+
+<td>
+{item.shd}
+</td>
+
+
+<td>
+{item.time}
+</td>
+
+
+</tr>
+
+
+)
+
+)
+
+}
+
+
+</tbody>
+
+
+</table>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div className="
+bg-white
+rounded-3xl
+border
+p-6
+">
+
+
+<h2 className="
+font-bold
+mb-5
+">
+
+📈 Biểu đồ theo ngày
+
+</h2>
+
+
+
+<div className="h-96">
+
+
+<ResponsiveContainer
+width="100%"
+height="100%"
+>
+
+
+<BarChart data={chartData}>
+
+
+<XAxis
+dataKey="date"
+/>
+
+
+<YAxis/>
+
+
+<Tooltip/>
+
+
+<Legend/>
+
+
+<Bar
+dataKey="bypass"
+/>
+
+
+<Bar
+dataKey="osp"
+/>
+
+
+</BarChart>
+
+
+</ResponsiveContainer>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</main>
+
+);
+
+
+}
+
+
+
+
+
+
+
+function Card(
+{
+title,
+value,
+icon
+}:any
+){
+
+
+return (
+
+<div className="
+bg-white
+rounded-3xl
+border
+border-slate-100
+shadow-sm
+p-6
+">
+
+
+<div className="
+flex
+justify-between
+items-center
+">
+
+
+<p className="
+text-slate-500
+">
+
+{title}
+
+</p>
+
+
+<div className="
+text-2xl
+">
+
+{icon}
+
+</div>
+
+
+</div>
+
+
+
+<p className="
+text-4xl
+font-bold
+text-slate-800
+mt-5
+">
+
+{value}
+
+</p>
+
+
+</div>
+
+)
+
+}

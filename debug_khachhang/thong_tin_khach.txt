@@ -1,0 +1,230 @@
+THÔNG TIN TRIỂN KHAI - SGH764250
+ Xin chào : phuongnam.tiendv1
+Thông tin hợp đồng
+Số hợp đồng:
+SGH764250
+Ngày tạo:
+21/02/2020 14:56:57
+Họ tên khách hàng:
+LE THI THANH TAM
+Đối tượng khác
+Cá nhân
+Tên truy cập:
+SGFDL-200221-250
+Tình trạng HĐ:
+Bình thường
+Loại dịch vụ:
+Giga
+SĐT chính chủ:
+0364059972
+SĐT liên hệ TK:
+0918537911
+SĐT User:
+Xem thêm
+
+Danh sách biên bản điện tử
+
+DANH SÁCH PHIẾU THI CÔNG
+TK.SGH764250.2409170920
+Loại TK:
+Khoi phuc dich vu
+Tình trạng:
+Đã xử lý hoàn tất
+Sales:
+Quihtt
+Ngày tạo:
+17/09/2024 09:20:06
+Ngày hoàn tất:
+17/09/2024 17:00:42
+
+TK.SGH764250.2409170920
+
+Kiểm tra kết nối
+
+Gen Password Member
+
+Giục tiến độ/ Phản ánh
+
+Thông tin triển khai chung
+BBĐT cần kí
+Địa chỉ:
+11/1A (phong ke cuoi) Luong Dinh Cua, Phuong An Khanh, TP.Thu Duc, Ho Chi Minh (D/C cũ: 10A Duong So 9, P.Long Truong, TP.Thu Duc, HCM)
+(Địa chỉ trước sát nhập:
+10A Duong So 9, P.Long Truong, TP.Thu Duc, HCM)
+Ngày tạo phiếu thi công:
+17/09/2024 09:20:06
+Đơn vị/Account tạo phiếu:
+Giao dich quay - Quihtt
+Tình trạng phiếu thi công:
+Đã xử lý hoàn tất
+Account/Ngày hoàn tất:
+PNC01.HAIVV - 17/09/2024 17:00:42 Xem lịch sử Chuyển chờ xác minh
+Thông số thi công:
+HCMP513.0009/HO/16-16-G
+Tập điểm:
+HCMP513.0009/HO
+Loại triển khai:
+Khoi phuc dich vu
+Biên bản nghiệm thu:
+Xem chi tiết
+Ghi chú CS :
+
+0 / 500
+
+Sales: KH KPDV ( lap moi) nhờ KTV hỗ trọ lh 0364059972 KH trả sau cước 250k/Tháng combo giga nobox
+Xem chi tiết
+Thông tin tác vụ
+Đối tác của phiếu:
+Phuong Nam-01
+Block của phiếu:
+Q9-002
+Block của nhân sự:
+Q2-001
+Nhân sự thi công:
+PNC01.HAIVV (SĐT: 0982555511)
+Nhân sự thi công phụ:
+Không có thông tin
+Số lần hẹn:
+1 Xem thông tin lịch sử hẹn
+ Hẹn xanh:
+13:30 - 15:30 - 17/09/2024 15:30:00
+Lịch sử nhận tuyến/ nhả tuyến:
+Xem chi tiết
+Thông tin điều hành:
+Xem chi tiết
+Thông tin dịch vụ
+Đơn hàng	Phiếu đăng kí	Loại dịch vụ	Gói dịch vụ	Vật tư triển khai	Loại triển khai	Loại giao dịch	Ngày tạo	Account Tạo	Kênh bán
+QGD5319623	QGD5319623
+Internet	Internet (SL:1)
+	Access Point AX3000CV2 (SL:1)
+	Khoi phuc dich vu	Khôi phục dịch vụ	17/09/2024 09:20:06	Quihtt	Quầy giao dịch
+FPT Play	FPT Play (SL:1)
+		Khoi phuc dich vu	Khôi phục dịch vụ	17/09/2024 09:20:06	Quihtt	Quầy giao dịch
+Vật tư triển khai
+Phiếu đăng kí/Dịch vụ	Chủng loại	Số lượng	Tình trạng thiết bị	Triển khai	Thu hồi	Chức năng	Mac	Mã chính sách
+QGD5319623 - Internet	Access Point AX3000CV2	1	Hàng mới	
+	
+	Modem	
+54:04:63:45:da:b5
+Không có thông tin
+	
+	1 core	96	Hàng mới	
+	
+	Cap	
+	
+	Day rut	7	Hàng mới	
+	
+	Vat tu phu khac	
+	
+	FC G	2	Hàng mới	
+	
+	Vat tu SD quang moi	
+	
+	Nguon FTTH 12V - 1A (duoi cam dai)	1	Hàng mới	
+	
+	Vat tu phu khac	
+	
+	ONT 1 port 1G	1	Hàng mới	
+	
+	Converter	
+	
+1-6 / 6
+ 
+ 
+ 
+Vật tư thu hồi
+Chủng loại	Số lượng	Mac	Nguyên nhân không thu hồi
+
+
+Không có dữ liệu
+
+0-0 / 0
+ 
+ 
+ 
+Xem Danh Sách Thiết Bị Hoàn Ứng
+Xem Lịch Sử Vật Tư
+Xem DS Mac Tạm Ứng
+Xem DS Vật Tư Nợ
+Thông tin thi công
+Cáp khảo sát Indoor/OutDoor
+0
+0
+Cáp tận dụng
+FO 1 Core
+Nguyên nhân trễ hạn
+Không xác định
+Ghi chú nguyên nhân trễ hạn
+
+0 / 500
+
+Kết quả xử lý
+Đã xử lý hoàn tất
+Nguyên nhân chưa cài đặt HiFPT
+Đã cài đặt - HT chưa cập nhật
+Nguyên nhân không hoàn tất từ wifi
+Không chọn
+Nguyên nhân không sử dụng Cap Lan cho Box
+Không chọn
+Tài khoản/thời gian cập nhật PTC
+PNC01.HAIVV - 17/09/2024 17:00:42
+ Xem Lịch sử thao tác phiếu
+Ghi chú triển khai:
+
+0 / 500
+
+Inside:
+Phân tuyến trên Inside PNC01.HAIVV>>(phuongnam.chipm 17/09/2024 10:20:51 AM)
+- KPDV va CDD - TP.Thu Duc - Quihtt - 17-Sep-24--
+PNC01.HAIVV>>17-09-2024 17:00:39 CH(d34f0849b5c76fc8)>>:kt da kpdv kh sd ok
+phuongnam.chipm17/09/2024 10:20:51 : Phân tuyến trên Inside PNC01.HAIVV
+Xem chi tiết
+Khoản thu
+Khoản thu đơn hàng
+Không có dữ liệu
+Khoản thu phụ trội phát sinh trên phiếu triển khai
+Phí dây điện
+(5,500/mét )
+0 đ
+Đã thu: 0 đ
+Số mét triển khai
+0 mét
+Số mét được miễn phí
+0 mét
+Số mét cần thanh toán
+0 mét
+Đơn giá (VAT)
+5,500 đ
+Thành tiền
+0 đ
+Đã thanh toán
+0 đ
+Số tiền cần thu
+0 đ
+Xem Chi Tiết
+Phí dây lan
+(11,000/mét - Miễn phí 10 mét )
+0 đ
+Đã thu: 0 đ
+Số mét triển khai
+0 mét
+Số mét được miễn phí
+10 mét
+Số mét cần thanh toán
+0 mét
+Đơn giá (VAT)
+11,000 đ
+Thành tiền
+0 đ
+Đã thanh toán
+0 đ
+Số tiền cần thu
+0 đ
+Xem Chi Tiết
+Tổng thanh toán
+0
+0
+Tình trạng thanh toán
+Không có khoản thu
+Số điện thoại nhận tin nhắn
+0364059972

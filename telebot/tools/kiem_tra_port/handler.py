@@ -1,0 +1,130 @@
+import asyncio
+
+
+from telebot.sessions.state import (
+    set_state,
+    get_state,
+    clear_state
+)
+
+
+from telebot.user_registry import save_user
+
+
+from telebot.tools.kiem_tra_port.kiem_tra_port import (
+    run
+)
+
+
+from telebot.usage_log import save_usage
+
+
+
+
+async def start_kiem_tra_port(
+    update,
+    context
+):
+
+    user_id = update.message.from_user.id
+
+
+    set_state(
+        user_id,
+        {
+            "action": "kiem_tra_port"
+        }
+    )
+
+
+    await update.message.reply_text(
+        "🔎 Kiểm tra PORT\n\n"
+        "Nhập số hợp đồng SHĐ:"
+    )
+
+
+
+
+
+
+async def receive_kiem_tra_port_input(
+    update,
+    context
+):
+
+    user_id = update.message.from_user.id
+
+
+    save_user(
+        update.message.from_user
+    )
+
+
+    state = get_state(
+        user_id
+    )
+
+
+    if not state:
+        return
+
+
+
+    if state.get("action") != "kiem_tra_port":
+        return
+
+
+
+    shd = update.message.text.strip()
+
+
+
+    clear_state(
+        user_id
+    )
+
+
+
+    await update.message.reply_text(
+        f"🔎 Đang kiểm tra PORT SHĐ: {shd}"
+    )
+
+
+
+    try:
+
+
+        result = await asyncio.to_thread(
+            run,
+            shd
+        )
+
+
+        save_usage(
+            tool="kiem_tra_port",
+            user=user_id,
+            shd=shd,
+            result="success"
+        )
+
+
+        await update.message.reply_text(
+            result
+        )
+
+
+
+    except Exception as e:
+
+
+        save_usage(
+            tool="kiem_tra_port",
+            user=user_id,
+            shd=shd,
+            result="failed"
+        )
+
+
+        await update.message.reply_text(
+            f"❌ Lỗi kiểm tra PORT:\n{e}"
+        )

@@ -1,0 +1,126 @@
+import asyncio
+
+
+from telebot.sessions.state import (
+    set_state,
+    get_state,
+    clear_state
+)
+
+
+from telebot.tools.osp.osp_queue import (
+    add_osp_job
+)
+
+from telebot.user_registry import save_user
+
+
+
+async def start_osp(update, context):
+
+    user_id = update.message.from_user.id
+
+
+    set_state(
+        user_id,
+        {
+            "action": "set_osp"
+        }
+    )
+
+
+    await update.message.reply_text(
+        "🛠 Set OSP\n\n"
+        "Nhập số hợp đồng SHĐ:"
+    )
+
+
+
+
+async def execute_osp(
+    user_id,
+    shd
+):
+
+    from telebot.tools.osp.set_osp import run
+
+
+    await BOT.send_message(
+        user_id,
+        f"🚀 Bắt đầu Set OSP\nSHĐ: {shd}"
+    )
+
+
+    try:
+
+        result = await asyncio.to_thread(
+            run,
+            shd,
+            user_id
+        )
+
+
+        await BOT.send_message(
+            user_id,
+            f"✅ Set OSP hoàn tất\n\n{result}"
+        )
+
+
+    except Exception as e:
+
+
+        await BOT.send_message(
+            user_id,
+            f"❌ Set OSP lỗi\n\n{e}"
+        )
+
+
+
+
+async def receive_osp_input(update, context):
+
+    global BOT
+
+    BOT = context.bot
+
+
+    user_id = update.message.from_user.id
+
+
+    save_user(
+        update.message.from_user
+    )
+
+
+    state = get_state(user_id)
+
+
+    if not state:
+        return
+
+
+
+    if state.get("action") != "set_osp":
+        return
+
+
+
+    shd = update.message.text.strip()
+
+
+    clear_state(
+        user_id
+    )
+
+
+    position = await add_osp_job(
+        user_id,
+        shd,
+        execute_osp
+    )
+
+
+    await update.message.reply_text(
+        f"📥 Đã nhận SHĐ: {shd}\n\n"
+        f"⏳ Vị trí hàng đợi: {position}"
+    )
