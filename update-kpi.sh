@@ -15,7 +15,7 @@ python scripts/import-kpi.py
 
 if [ $? -ne 0 ]; then
     echo "IMPORT KPI FAILED"
-    read -p "Press Enter"
+    read -p "Press Enter to close..."
     exit 1
 fi
 
@@ -26,7 +26,7 @@ npm run build
 
 if [ $? -ne 0 ]; then
     echo "BUILD FAILED"
-    read -p "Press Enter"
+    read -p "Press Enter to close..."
     exit 1
 fi
 
@@ -36,16 +36,26 @@ echo "[3/5] Restart Local Dashboard"
 pm2 restart kpi-dashboard
 
 
-echo "[4/5] Commit KPI data"
+echo "[4/5] Check KPI changes"
 
 git add data/kpi.ts data/summary.ts data/cll-detail.ts
 
-git commit -m "update KPI data"
 
+if git diff --cached --quiet; then
 
-echo "[5/5] Push to GitHub -> Vercel"
+    echo "No KPI changes"
 
-git push
+else
+
+    echo "KPI changed - Commit"
+
+    git commit -m "update KPI data"
+
+    echo "Push GitHub -> Vercel"
+
+    git push
+
+fi
 
 
 echo "=============================="
