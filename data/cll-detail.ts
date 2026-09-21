@@ -693,7 +693,7 @@ export const cllDetail = [
     "sheet": "1",
     "employee": "PNC01.BIENTHH",
     "contract": "SGH213492",
-    "customer": "Huynh Thanh Cuong",
+    "customer": "LE HUYNH MY TIEN",
     "createTime": "28/08/2026 11:05:07",
     "finishTime": "28/08/2026 15:04:56",
     "service": "Internet",
@@ -1681,6 +1681,16 @@ export const cllDetail = [
   },
   {
     "sheet": "1",
+    "employee": "PNC01.KHANGPT",
+    "contract": "SGACW1480",
+    "customer": "LY PHUONG THAO ",
+    "createTime": "01/09/2026 15:45:47",
+    "finishTime": "04/09/2026 08:26:03",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
     "employee": "PNC01.ANNP1",
     "contract": "SGJ024482",
     "customer": "QUACH BAO TRAN",
@@ -1931,6 +1941,16 @@ export const cllDetail = [
   },
   {
     "sheet": "1",
+    "employee": "PNC01.TOANPT3",
+    "contract": "SGJ147181",
+    "customer": "DOAN VAN TINH",
+    "createTime": "23/08/2026 10:07:04",
+    "finishTime": "25/08/2026 07:53:44",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
     "employee": "PNC01.THANGNQ6",
     "contract": "SGH470270",
     "customer": "LE THI THAM",
@@ -2051,11 +2071,41 @@ export const cllDetail = [
   },
   {
     "sheet": "1",
+    "employee": "PNC01.PHITH",
+    "contract": "SGAFP8281",
+    "customer": "Cao Nguyen Thao Nguyen",
+    "createTime": "18/08/2026 15:27:20",
+    "finishTime": "20/08/2026 10:31:27",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
     "employee": "PNC01.DODT",
     "contract": "SGAFD0525",
     "customer": "Vu Ngoc Quang",
     "createTime": "09/09/2026 08:25:20",
     "finishTime": "09/09/2026 17:01:18",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.LUANND1",
+    "contract": "SGACZ3545",
+    "customer": "VO THI ANH TUYET",
+    "createTime": "20/08/2026 07:30:43",
+    "finishTime": "21/08/2026 09:10:27",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.PHITH",
+    "contract": "SGAFF4441",
+    "customer": "Lam Vinh Truong",
+    "createTime": "09/09/2026 16:50:19",
+    "finishTime": "10/09/2026 10:11:05",
     "service": "Internet",
     "reason": "nan"
   },
@@ -2111,6 +2161,16 @@ export const cllDetail = [
   },
   {
     "sheet": "1",
+    "employee": "PNC01.HUNGLQ2",
+    "contract": "SGACJ1471",
+    "customer": "Nguyen Thi Kim Anh",
+    "createTime": "24/08/2026 20:35:02",
+    "finishTime": "26/08/2026 18:48:02",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
     "employee": "PNC01.TUNGDT6",
     "contract": "SGH012948",
     "customer": "Pham Xuan Sinh",
@@ -2126,6 +2186,16 @@ export const cllDetail = [
     "customer": "PHAM ANH DUNG",
     "createTime": "06/09/2026 11:17:28",
     "finishTime": "09/09/2026 10:07:05",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.THINM",
+    "contract": "SGACE2338",
+    "customer": "TRAN NGOC TUYEN",
+    "createTime": "29/08/2026 10:38:25",
+    "finishTime": "30/08/2026 17:33:01",
     "service": "Internet",
     "reason": "nan"
   },
@@ -2251,6 +2321,16 @@ export const cllDetail = [
   },
   {
     "sheet": "1",
+    "employee": "PNC01.TOANPT3",
+    "contract": "SGH567937",
+    "customer": "Tran Thi Phuong",
+    "createTime": "10/09/2026 20:49:12",
+    "finishTime": "11/09/2026 11:26:41",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
     "employee": "PNC01.HUNGLB1",
     "contract": "SGAAP8130",
     "customer": "CONG TY TRACH NHIEM HUU HAN NGUYEN VIET BINH MINH",
@@ -2296,6 +2376,16 @@ export const cllDetail = [
     "customer": "HUYNH TRUNG TINH",
     "createTime": "30/08/2026 13:33:40",
     "finishTime": "31/08/2026 10:14:11",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.QUICV",
+    "contract": "SGJ018305",
+    "customer": "TRAN THI HUYEN",
+    "createTime": "11/09/2026 15:50:56",
+    "finishTime": "11/09/2026 16:40:09",
     "service": "Internet",
     "reason": "nan"
   },
@@ -2431,6 +2521,16 @@ export const cllDetail = [
   },
   {
     "sheet": "1",
+    "employee": "PNC01.ANHV",
+    "contract": "SGACG7677",
+    "customer": "PHAM TRONG LONG",
+    "createTime": "10/09/2026 16:05:16",
+    "finishTime": "12/09/2026 09:34:26",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
     "employee": "PNC01.PHINDT",
     "contract": "SGAFM5904",
     "customer": "Dao Thi Kim Tuoi",
@@ -2496,6 +2596,16 @@ export const cllDetail = [
     "customer": "NGO MINH HUY",
     "createTime": "07/09/2026 19:24:17",
     "finishTime": "08/09/2026 13:20:02",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.DATNT49",
+    "contract": "SGABF3283",
+    "customer": "LE HO DINH KHOI",
+    "createTime": "07/09/2026 11:34:51",
+    "finishTime": "09/09/2026 19:03:33",
     "service": "Internet",
     "reason": "nan"
   },
@@ -2591,6 +2701,26 @@ export const cllDetail = [
   },
   {
     "sheet": "1",
+    "employee": "PNC01.BINHPT2",
+    "contract": "SGH463309",
+    "customer": "Bui Thi Kim Thuy",
+    "createTime": "06/09/2026 22:03:56",
+    "finishTime": "08/09/2026 21:00:21",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.DONGNH4",
+    "contract": "SGH467824",
+    "customer": "NGUYEN HOANG THAO LY",
+    "createTime": "11/09/2026 19:21:11",
+    "finishTime": "12/09/2026 18:36:20",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
     "employee": "PNC01.DONGT",
     "contract": "SGH728703",
     "customer": "Tran Thanh Chien",
@@ -2636,6 +2766,36 @@ export const cllDetail = [
     "customer": "Luong Viet Hoang",
     "createTime": "17/08/2026 17:02:28",
     "finishTime": "18/08/2026 15:07:04",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.THANHDN1",
+    "contract": "SGH524351",
+    "customer": "Le Quang Nguyen",
+    "createTime": "11/09/2026 06:44:47",
+    "finishTime": "11/09/2026 20:51:13",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HUNGNM",
+    "contract": "SGAFD0751",
+    "customer": "TRAN NGOC LINH",
+    "createTime": "03/09/2026 07:21:31",
+    "finishTime": "04/09/2026 15:16:22",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.DONGNH4",
+    "contract": "SGD427941",
+    "customer": "Nguyen Kim Hue",
+    "createTime": "12/09/2026 08:30:38",
+    "finishTime": "12/09/2026 18:17:45",
     "service": "Internet",
     "reason": "nan"
   },
@@ -2711,11 +2871,61 @@ export const cllDetail = [
   },
   {
     "sheet": "1",
+    "employee": "PNC01.DUYPT3",
+    "contract": "SGACD3462",
+    "customer": "THUONG CONG HUY",
+    "createTime": "04/09/2026 10:00:52",
+    "finishTime": "07/09/2026 11:34:36",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
     "employee": "PNC01.MINHNTN",
     "contract": "SGABY2746",
     "customer": "LUONG ANH DUNG",
     "createTime": "13/09/2026 15:09:34",
     "finishTime": "13/09/2026 18:06:18",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.BAOMQ1",
+    "contract": "SGAEE7530",
+    "customer": "NGUYEN QUOC CUONG",
+    "createTime": "13/09/2026 14:08:20",
+    "finishTime": "13/09/2026 16:05:35",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.QUICV",
+    "contract": "SGAEM8088",
+    "customer": "BUI DUC VIEN",
+    "createTime": "11/09/2026 22:35:40",
+    "finishTime": "12/09/2026 10:58:48",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.DONGNH4",
+    "contract": "SGAFJ5253",
+    "customer": "Nguyen Thi Ngoc Thuy",
+    "createTime": "12/09/2026 17:22:40",
+    "finishTime": "13/09/2026 10:16:53",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.DINHCN",
+    "contract": "SGAEH4475",
+    "customer": "LE QUOC DUNG",
+    "createTime": "11/09/2026 07:52:39",
+    "finishTime": "11/09/2026 15:46:23",
     "service": "Internet",
     "reason": "nan"
   },
@@ -2731,11 +2941,1421 @@ export const cllDetail = [
   },
   {
     "sheet": "1",
+    "employee": "PNC01.QUANGNN10",
+    "contract": "SGD418416",
+    "customer": "Dao Ngoc An",
+    "createTime": "13/09/2026 10:43:50",
+    "finishTime": "13/09/2026 12:21:01",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
     "employee": "PNC01.TRIEULT1",
     "contract": "SGAAW5905",
     "customer": "TRAN TRONG KHIEM",
     "createTime": "22/08/2026 12:17:29",
     "finishTime": "22/08/2026 13:09:32",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HIEUNT16",
+    "contract": "SGAFK3669",
+    "customer": "HUYNH NGUYEN HOANG VY",
+    "createTime": "23/08/2026 20:03:51",
+    "finishTime": "24/08/2026 15:08:37",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.DINHTQ",
+    "contract": "SGACW6088",
+    "customer": "HOANG ANH DUONG",
+    "createTime": "25/08/2026 10:17:04",
+    "finishTime": "25/08/2026 16:03:40",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.VIETPQ2",
+    "contract": "SGH775823",
+    "customer": "HO THI HUONG",
+    "createTime": "13/09/2026 11:13:57",
+    "finishTime": "14/09/2026 10:15:54",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.DINHCN",
+    "contract": "SGJ063813",
+    "customer": "NGUYEN DUC THINH",
+    "createTime": "14/09/2026 09:54:40",
+    "finishTime": "14/09/2026 12:27:31",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HUNGLB1",
+    "contract": "SGH667680",
+    "customer": "PHAN THANH TINH ANH",
+    "createTime": "06/09/2026 17:07:21",
+    "finishTime": "08/09/2026 14:37:02",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.TAITT5",
+    "contract": "SGAFE1751",
+    "customer": "Cao Thi Thanh Tam",
+    "createTime": "07/09/2026 07:07:18",
+    "finishTime": "07/09/2026 11:43:04",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HOANDD",
+    "contract": "SGAAB2529",
+    "customer": "NGUYEN XUAN QUANG",
+    "createTime": "03/09/2026 20:20:37",
+    "finishTime": "04/09/2026 14:46:35",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.TOANPT3",
+    "contract": "SGH240565",
+    "customer": "Do Thi Trang Dai",
+    "createTime": "06/09/2026 16:19:15",
+    "finishTime": "07/09/2026 15:14:20",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.NAMNP5",
+    "contract": "SGAFR3089",
+    "customer": "Ho Bao Lam",
+    "createTime": "10/09/2026 20:28:48",
+    "finishTime": "14/09/2026 15:15:46",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.TRUONGTD1",
+    "contract": "SGH870904",
+    "customer": "NGUYEN THI THINH",
+    "createTime": "05/09/2026 15:59:09",
+    "finishTime": "06/09/2026 10:35:55",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.TRUONGTD1",
+    "contract": "SGH951903",
+    "customer": "Cong Ty Co Phan Nguyen Phu Lieu Det May Binh An",
+    "createTime": "09/09/2026 12:21:00",
+    "finishTime": "10/09/2026 10:31:38",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.NHOVN",
+    "contract": "SGAFS7130",
+    "customer": "Pham Van Vo",
+    "createTime": "13/09/2026 16:23:38",
+    "finishTime": "14/09/2026 09:15:24",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HAIVV",
+    "contract": "SGACS8230",
+    "customer": "PHAM VAN DUC",
+    "createTime": "02/09/2026 18:38:10",
+    "finishTime": "06/09/2026 15:03:28",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.THAINV12",
+    "contract": "SGACA1663",
+    "customer": "MUIR IAIN CAMPBELL",
+    "createTime": "07/09/2026 11:04:03",
+    "finishTime": "07/09/2026 16:57:39",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.BAOMQ1",
+    "contract": "SGAFR0628",
+    "customer": "Le Van Hang",
+    "createTime": "11/09/2026 08:36:13",
+    "finishTime": "11/09/2026 10:41:21",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.DAINH",
+    "contract": "SGAFK6722",
+    "customer": "Vu Thi Hong Nhung",
+    "createTime": "29/08/2026 10:51:31",
+    "finishTime": "29/08/2026 11:17:37",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.XUANNV2",
+    "contract": "SGAFM4085",
+    "customer": "Truong Cong Dung",
+    "createTime": "12/09/2026 09:17:58",
+    "finishTime": "12/09/2026 15:09:30",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.NOTA",
+    "contract": "SGH625102",
+    "customer": "Nguyen Thi Duyen Em",
+    "createTime": "12/09/2026 10:22:37",
+    "finishTime": "12/09/2026 18:41:07",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.XUANNV2",
+    "contract": "SGAEF2528",
+    "customer": "NGUYEN THI AI HANG",
+    "createTime": "11/09/2026 16:08:48",
+    "finishTime": "12/09/2026 09:34:14",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HOIDV",
+    "contract": "SGH311982",
+    "customer": "HO VAN THEP",
+    "createTime": "13/09/2026 17:28:21",
+    "finishTime": "14/09/2026 11:47:58",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HUNGNM",
+    "contract": "SGAAK3090",
+    "customer": "DUONG MINH TRUNG",
+    "createTime": "09/09/2026 21:03:10",
+    "finishTime": "11/09/2026 11:34:34",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.TRIEUCT",
+    "contract": "SGH918379",
+    "customer": "Dang Van Nguyen",
+    "createTime": "12/09/2026 12:07:14",
+    "finishTime": "14/09/2026 21:44:29",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.BINHPT2",
+    "contract": "SGACG6588",
+    "customer": "PHAM NGOC DEP",
+    "createTime": "08/09/2026 13:23:13",
+    "finishTime": "10/09/2026 14:40:57",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.THANHDN1",
+    "contract": "SGAAQ0122",
+    "customer": "NGUYEN PHI LONG",
+    "createTime": "17/08/2026 12:52:24",
+    "finishTime": "18/08/2026 09:55:22",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.THINHBD1",
+    "contract": "SGACA7234",
+    "customer": "NGUYEN MINH LAM",
+    "createTime": "31/08/2026 06:17:09",
+    "finishTime": "02/09/2026 11:13:51",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.DONGTD",
+    "contract": "SGAFM7471",
+    "customer": "CONG TY TNHH MOT THANH VIEN THUONG MAI LUAN HUYNH",
+    "createTime": "12/09/2026 13:57:40",
+    "finishTime": "12/09/2026 21:34:25",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.TOANPT3",
+    "contract": "SGAAV1110",
+    "customer": "LE HUU PHUONG",
+    "createTime": "27/08/2026 18:50:54",
+    "finishTime": "07/09/2026 22:35:25",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HUYTPG",
+    "contract": "SGABL0382",
+    "customer": "DANG PHAN PHUONG THAO",
+    "createTime": "11/09/2026 07:57:58",
+    "finishTime": "12/09/2026 10:13:04",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.XUANNV2",
+    "contract": "SGH885671",
+    "customer": "DO THI THU HA",
+    "createTime": "08/09/2026 14:09:22",
+    "finishTime": "08/09/2026 15:51:35",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HIEPPT1",
+    "contract": "SGAEX0194",
+    "customer": "PHAN THI MINH THU",
+    "createTime": "05/09/2026 16:13:52",
+    "finishTime": "06/09/2026 09:01:38",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.PHITH",
+    "contract": "SGH744652",
+    "customer": "NGUYEN VAN SU",
+    "createTime": "11/09/2026 07:23:35",
+    "finishTime": "11/09/2026 16:47:47",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.PHAPTD",
+    "contract": "SGAAR1964",
+    "customer": "TRAN NGOC HY",
+    "createTime": "04/09/2026 13:12:08",
+    "finishTime": "04/09/2026 17:14:17",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.DONGNH4",
+    "contract": "SGAEM1940",
+    "customer": "HUYNH CHANH TIN",
+    "createTime": "28/08/2026 16:18:28",
+    "finishTime": "29/08/2026 08:28:47",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.QUICV",
+    "contract": "SGD100760",
+    "customer": "Nguyen Xuan Thiem",
+    "createTime": "29/08/2026 17:32:37",
+    "finishTime": "30/08/2026 08:37:17",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.KHANGPT",
+    "contract": "SGJ059734",
+    "customer": "NGUYEN MINH TUNG",
+    "createTime": "08/09/2026 20:17:23",
+    "finishTime": "15/09/2026 16:33:53",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.THUYETNM",
+    "contract": "SGH247969",
+    "customer": "Dang Thi Thu Ha",
+    "createTime": "28/08/2026 10:36:41",
+    "finishTime": "28/08/2026 12:21:09",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HOANGBV",
+    "contract": "SGH541992",
+    "customer": "Nguyen Van Hoc",
+    "createTime": "25/08/2026 21:26:59",
+    "finishTime": "26/08/2026 16:07:00",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.KHANGPT",
+    "contract": "SGH736819",
+    "customer": "PHAM DINH HUNG",
+    "createTime": "28/08/2026 21:04:45",
+    "finishTime": "30/08/2026 14:28:28",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.THINHNH4",
+    "contract": "SGAFP2012",
+    "customer": "Nguyen Minh Hau",
+    "createTime": "11/09/2026 10:49:40",
+    "finishTime": "12/09/2026 10:17:40",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.CAONPD",
+    "contract": "SGD255332",
+    "customer": "Nguyen Huu Ngoc Luu",
+    "createTime": "23/08/2026 23:04:07",
+    "finishTime": "24/08/2026 15:10:40",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.KHANGPT",
+    "contract": "SGAFP4836",
+    "customer": "Dinh Ngoc Vu",
+    "createTime": "17/08/2026 13:35:00",
+    "finishTime": "19/08/2026 09:00:22",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.NAMNP5",
+    "contract": "SGAEZ1740",
+    "customer": "KHONG MINH DAT",
+    "createTime": "14/09/2026 21:06:17",
+    "finishTime": "15/09/2026 11:19:02",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.NAMNP5",
+    "contract": "SGAFQ4672",
+    "customer": "Nguyen Tien Duc",
+    "createTime": "22/08/2026 15:21:56",
+    "finishTime": "23/08/2026 14:26:37",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.PHUNGTD",
+    "contract": "SGD739186",
+    "customer": "Nguyen Thi Thu Van",
+    "createTime": "22/08/2026 07:29:59",
+    "finishTime": "22/08/2026 11:11:40",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.PHITH",
+    "contract": "SGH727039",
+    "customer": "PHAM VAN BAO",
+    "createTime": "26/08/2026 12:19:23",
+    "finishTime": "26/08/2026 16:57:44",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.TANHLV1",
+    "contract": "SGAFA0188",
+    "customer": "HUYNH TRUNG MINH",
+    "createTime": "08/09/2026 13:08:01",
+    "finishTime": "08/09/2026 17:11:28",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HADV1",
+    "contract": "SGAAW5905",
+    "customer": "TRAN TRONG KHIEM",
+    "createTime": "14/09/2026 15:32:06",
+    "finishTime": "14/09/2026 16:30:24",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.PHATNA1",
+    "contract": "SGABR2447",
+    "customer": "NGUYEN THI NGOC HUONG",
+    "createTime": "09/09/2026 09:21:03",
+    "finishTime": "14/09/2026 06:56:13",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.DODT",
+    "contract": "SGACZ5475",
+    "customer": "CONG TY TNHH DAU TU & PHAT TRIEN DIA OC MINH TAM",
+    "createTime": "26/08/2026 10:01:35",
+    "finishTime": "26/08/2026 16:50:37",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HUYPT1",
+    "contract": "SGABZ3803",
+    "customer": "TRAN VAN HIEN",
+    "createTime": "09/09/2026 07:44:31",
+    "finishTime": "09/09/2026 15:10:54",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.TRUNGP",
+    "contract": "SGH391876",
+    "customer": "Vo Huu Duc",
+    "createTime": "02/09/2026 10:09:01",
+    "finishTime": "02/09/2026 10:33:27",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.TUTNT",
+    "contract": "SGH311774",
+    "customer": "Nguyen Duy Dong",
+    "createTime": "04/09/2026 14:50:51",
+    "finishTime": "05/09/2026 16:27:03",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.DUCVV1",
+    "contract": "SGAFG8902",
+    "customer": "Nguyen Thi Diem My",
+    "createTime": "24/08/2026 17:26:21",
+    "finishTime": "25/08/2026 10:58:04",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.LUATNT",
+    "contract": "SGACL6818",
+    "customer": "DO VU SY NGUYEN",
+    "createTime": "14/09/2026 17:47:44",
+    "finishTime": "15/09/2026 14:46:53",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.BINHPT2",
+    "contract": "SGH457607",
+    "customer": "Le Van Quynh ",
+    "createTime": "09/09/2026 10:06:30",
+    "finishTime": "11/09/2026 08:18:57",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.LUATNT",
+    "contract": "SGAFS4212",
+    "customer": "Tran Ngoc Thanh",
+    "createTime": "12/09/2026 14:12:01",
+    "finishTime": "13/09/2026 17:09:55",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.QUICV",
+    "contract": "SGACK2839",
+    "customer": "BUI THI THANH LOAN",
+    "createTime": "12/09/2026 10:50:43",
+    "finishTime": "12/09/2026 16:49:35",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.THUYETNM",
+    "contract": "SGAAT4381",
+    "customer": "NGUYEN THI THANH QUY",
+    "createTime": "18/08/2026 09:57:37",
+    "finishTime": "18/08/2026 10:42:37",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.DAINH",
+    "contract": "SGACE4748",
+    "customer": "LE THI THANH TIEN",
+    "createTime": "17/08/2026 17:53:47",
+    "finishTime": "18/08/2026 09:56:29",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.DUNGNV29",
+    "contract": "SGAAM7664",
+    "customer": "TO CHI DAN",
+    "createTime": "15/09/2026 06:53:31",
+    "finishTime": "15/09/2026 12:53:21",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.PHUND3",
+    "contract": "SGD560663",
+    "customer": "Tran Huynh Anh Son",
+    "createTime": "17/08/2026 01:23:45",
+    "finishTime": "19/08/2026 08:09:44",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.QUANGNN10",
+    "contract": "SGACX1348",
+    "customer": "NGUYEN THANH HIEP",
+    "createTime": "13/09/2026 14:32:31",
+    "finishTime": "13/09/2026 18:40:06",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.PHUDLQ",
+    "contract": "SGFD35011",
+    "customer": "Phan Khac Thuan",
+    "createTime": "30/08/2026 09:57:55",
+    "finishTime": "30/08/2026 15:57:58",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.DONGT",
+    "contract": "SGAEL4370",
+    "customer": "AU NGOC THUY UYEN",
+    "createTime": "10/09/2026 15:23:44",
+    "finishTime": "11/09/2026 11:05:34",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HAOHN",
+    "contract": "SGACB1076",
+    "customer": "CONG TY TNHH BK HOMES",
+    "createTime": "19/08/2026 14:37:00",
+    "finishTime": "19/08/2026 15:31:20",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.DATNT49",
+    "contract": "SGAAR6796",
+    "customer": "DO MINH SANG",
+    "createTime": "10/09/2026 19:43:31",
+    "finishTime": "11/09/2026 09:13:01",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.DUCNLH",
+    "contract": "SGH935012",
+    "customer": "NGUYEN MINH TIEN",
+    "createTime": "07/09/2026 09:46:40",
+    "finishTime": "07/09/2026 18:44:11",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.DONGNH4",
+    "contract": "SGAFR8124",
+    "customer": "Huynh Quoc Thanh",
+    "createTime": "13/09/2026 09:41:58",
+    "finishTime": "14/09/2026 08:07:56",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.QUANPM5",
+    "contract": "SGAEW5685",
+    "customer": "PHAM NGOC CUONG",
+    "createTime": "22/08/2026 16:45:49",
+    "finishTime": "22/08/2026 17:40:28",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HUNGNM",
+    "contract": "SGH384352",
+    "customer": "NGUYEN THI LAM BINH",
+    "createTime": "15/09/2026 13:14:39",
+    "finishTime": "15/09/2026 17:57:54",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.DATQT",
+    "contract": "SGACS7196",
+    "customer": "NGUYEN QUANG KIET",
+    "createTime": "10/09/2026 19:03:53",
+    "finishTime": "11/09/2026 18:50:57",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.PHUOCTH",
+    "contract": "SGAEB6232",
+    "customer": "VLASOV ALEKSANDR",
+    "createTime": "24/08/2026 18:22:14",
+    "finishTime": "25/08/2026 19:46:37",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.TRUNGP",
+    "contract": "SGAEX3540",
+    "customer": "TRAN THE NHAN",
+    "createTime": "02/09/2026 07:04:49",
+    "finishTime": "02/09/2026 09:25:22",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HAULX",
+    "contract": "SGAEM1614",
+    "customer": "TONG THI HAO",
+    "createTime": "29/08/2026 10:06:35",
+    "finishTime": "29/08/2026 10:50:24",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.TUONGNQ",
+    "contract": "SGAFC2539",
+    "customer": "Le Tran Minh Son",
+    "createTime": "27/08/2026 19:43:30",
+    "finishTime": "28/08/2026 09:23:58",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.QUANGNN10",
+    "contract": "SGJ121610",
+    "customer": "DANG PHUOC LOC",
+    "createTime": "12/09/2026 19:35:23",
+    "finishTime": "13/09/2026 13:11:51",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.TANHLV1",
+    "contract": "SGH730512",
+    "customer": "LE THI HAI ANH",
+    "createTime": "27/08/2026 14:29:35",
+    "finishTime": "29/08/2026 11:30:05",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.DONGT",
+    "contract": "SGH457890",
+    "customer": "CONG TY TNHH SAN XUAT THUONG MAI KY THUAT TRAN GIA PHAT",
+    "createTime": "03/09/2026 10:35:55",
+    "finishTime": "05/09/2026 09:50:45",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.TRIEUCT",
+    "contract": "SGAFC1760",
+    "customer": "Nguyen Thi Ngoc Hanh",
+    "createTime": "28/08/2026 15:23:01",
+    "finishTime": "29/08/2026 11:08:54",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.DONGTD",
+    "contract": "SGH296280",
+    "customer": "Dao Thi Ngoc Thuong",
+    "createTime": "16/09/2026 14:44:30",
+    "finishTime": "16/09/2026 22:43:42",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HUNGLQ2",
+    "contract": "SGH840895",
+    "customer": "TRAN THI NGOC CHAU",
+    "createTime": "18/08/2026 21:01:34",
+    "finishTime": "19/08/2026 12:27:31",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.DUOCNA",
+    "contract": "SGAFC2288",
+    "customer": "Sam Thi Do Oanh",
+    "createTime": "19/08/2026 12:17:01",
+    "finishTime": "19/08/2026 18:56:43",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.PHITH",
+    "contract": "SGH590856",
+    "customer": "BUI DUC LOI",
+    "createTime": "06/09/2026 10:45:59",
+    "finishTime": "06/09/2026 17:01:11",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HAINX1",
+    "contract": "SGD630716",
+    "customer": "Truong Tuyet Hue",
+    "createTime": "30/08/2026 13:03:16",
+    "finishTime": "30/08/2026 17:09:01",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.PHUTT3",
+    "contract": "SGH070105",
+    "customer": "NGUYEN THI KIEU VAN",
+    "createTime": "21/08/2026 12:09:21",
+    "finishTime": "22/08/2026 14:25:11",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.DODT",
+    "contract": "SGACK2209",
+    "customer": "HOANG TUAN DUNG",
+    "createTime": "29/08/2026 19:31:40",
+    "finishTime": "30/08/2026 14:34:05",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HUYPT1",
+    "contract": "SGABH5152",
+    "customer": "VU THUY QUYNH",
+    "createTime": "23/08/2026 10:14:38",
+    "finishTime": "24/08/2026 09:39:24",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.LUATNT",
+    "contract": "SGABU5563",
+    "customer": "Nguyen Thi Thuy Hang",
+    "createTime": "16/09/2026 18:15:36",
+    "finishTime": "17/09/2026 16:37:20",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.CAONPD",
+    "contract": "SGH595245",
+    "customer": "PHAN HOANG ANH",
+    "createTime": "27/08/2026 20:23:59",
+    "finishTime": "29/08/2026 09:41:45",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.PHUDLQ",
+    "contract": "SGAEB6713",
+    "customer": "BUI NHU Y",
+    "createTime": "13/09/2026 19:39:58",
+    "finishTime": "14/09/2026 08:21:19",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.NHOVN",
+    "contract": "SGH715460",
+    "customer": "TRINH NGOC THUY",
+    "createTime": "08/09/2026 07:48:01",
+    "finishTime": "08/09/2026 21:20:59",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.TAITT5",
+    "contract": "SGH664997",
+    "customer": "PHAM LONG TUAN",
+    "createTime": "24/08/2026 18:21:50",
+    "finishTime": "25/08/2026 18:24:10",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.TRIEULT1",
+    "contract": "SGAEF4704",
+    "customer": "DANG THI THANH LE",
+    "createTime": "13/09/2026 20:58:18",
+    "finishTime": "14/09/2026 09:24:51",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.CUAKV",
+    "contract": "SGACF4273",
+    "customer": "VO HUU QUANG",
+    "createTime": "28/08/2026 15:54:14",
+    "finishTime": "30/08/2026 17:06:58",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.THINHNH4",
+    "contract": "SGACQ6342",
+    "customer": "CONG TY TNHH CONG NGHE VA DICH VU LABMASTER",
+    "createTime": "12/09/2026 08:21:46",
+    "finishTime": "12/09/2026 11:40:35",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.QUANTT",
+    "contract": "SGABP5853",
+    "customer": "DU XUAN BINH",
+    "createTime": "20/08/2026 07:42:06",
+    "finishTime": "20/08/2026 11:03:04",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HUNGNM",
+    "contract": "SGFD72720",
+    "customer": "Chau Ngoc Xuan Luyen",
+    "createTime": "05/09/2026 07:56:00",
+    "finishTime": "05/09/2026 09:58:28",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HIEPPT1",
+    "contract": "SGH456937",
+    "customer": "Huynh Thanh Phong",
+    "createTime": "14/09/2026 19:48:39",
+    "finishTime": "15/09/2026 17:29:08",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.TRIEUCT",
+    "contract": "SGH679119",
+    "customer": "PHAM THI HONG DEP",
+    "createTime": "18/08/2026 13:26:43",
+    "finishTime": "19/08/2026 16:04:42",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HIEPPT1",
+    "contract": "SGAFD2130",
+    "customer": "Vo Le Duy",
+    "createTime": "25/08/2026 08:12:46",
+    "finishTime": "26/08/2026 10:31:44",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.THANHDN1",
+    "contract": "SGACS4383",
+    "customer": "VO NGOC CUONG",
+    "createTime": "07/09/2026 10:08:40",
+    "finishTime": "07/09/2026 11:59:21",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HUANNH1",
+    "contract": "SGD586223",
+    "customer": "Nguyen Dang Y",
+    "createTime": "03/09/2026 21:45:53",
+    "finishTime": "04/09/2026 14:57:52",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.TRIEUCT",
+    "contract": "SGAFM1751",
+    "customer": "Huynh Thi Le Dung",
+    "createTime": "10/09/2026 14:02:38",
+    "finishTime": "10/09/2026 15:59:35",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.BIENTHH",
+    "contract": "SGH620550",
+    "customer": "Dinh Ngoc Tam",
+    "createTime": "20/08/2026 22:44:22",
+    "finishTime": "21/08/2026 13:05:18",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HUNGLQ2",
+    "contract": "SGJ150111",
+    "customer": "Cong Ty TNHH MTV Vien Thong Quoc Te FPT – Vietlott",
+    "createTime": "28/08/2026 14:03:53",
+    "finishTime": "31/08/2026 18:46:28",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.BIENTHH",
+    "contract": "SGH030221",
+    "customer": "Nguyen Thi Hong Nghia",
+    "createTime": "23/08/2026 21:30:18",
+    "finishTime": "24/08/2026 18:45:19",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.PHUONGNH",
+    "contract": "SGAFN4095",
+    "customer": "NGUYEN THAI HOA",
+    "createTime": "17/09/2026 20:23:58",
+    "finishTime": "18/09/2026 09:11:01",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.XUANNV2",
+    "contract": "SGH869737",
+    "customer": "LE THI THUY",
+    "createTime": "17/09/2026 17:38:12",
+    "finishTime": "18/09/2026 08:39:54",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HIEPPT1",
+    "contract": "SGH500139",
+    "customer": "Tran Van Binh",
+    "createTime": "04/09/2026 21:19:11",
+    "finishTime": "05/09/2026 08:25:46",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.XUANNV2",
+    "contract": "SGH080338",
+    "customer": "Le Van Luan",
+    "createTime": "11/09/2026 17:31:17",
+    "finishTime": "12/09/2026 14:41:08",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.PHATNA1",
+    "contract": "SGACL2206",
+    "customer": "TRUONG VAN TRI",
+    "createTime": "15/09/2026 12:55:15",
+    "finishTime": "15/09/2026 13:53:41",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.NHAMNDH",
+    "contract": "SGACD1213",
+    "customer": "TRAN THI LAN ANH",
+    "createTime": "17/09/2026 21:33:26",
+    "finishTime": "18/09/2026 10:40:55",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.KIETPT2",
+    "contract": "SGH297510",
+    "customer": "Nguyen Kim Huynh",
+    "createTime": "13/09/2026 11:10:35",
+    "finishTime": "13/09/2026 15:24:53",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.LINHHNH",
+    "contract": "SGAEZ0467",
+    "customer": "NGUYEN MAI HONG ANH",
+    "createTime": "12/09/2026 09:48:26",
+    "finishTime": "15/09/2026 15:49:55",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.THAINV12",
+    "contract": "SGH503574",
+    "customer": "Dang Cong Truong Son",
+    "createTime": "14/09/2026 11:59:01",
+    "finishTime": "15/09/2026 09:13:06",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.DATNT49",
+    "contract": "SGACZ5830",
+    "customer": "TRAN HOANG UYEN ANH",
+    "createTime": "07/09/2026 01:58:01",
+    "finishTime": "07/09/2026 21:32:24",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.NAMNP5",
+    "contract": "SGD174951",
+    "customer": "Vien Ngoc Bach",
+    "createTime": "14/09/2026 17:02:44",
+    "finishTime": "15/09/2026 14:35:55",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.TANHLV1",
+    "contract": "SGACP4497",
+    "customer": "NGUYEN THI BEN SA",
+    "createTime": "17/09/2026 21:57:29",
+    "finishTime": "18/09/2026 10:18:13",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.MANHOV",
+    "contract": "SGABP5853",
+    "customer": "DU XUAN BINH",
+    "createTime": "18/09/2026 09:21:57",
+    "finishTime": "18/09/2026 11:37:48",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HIEPPT1",
+    "contract": "SGACQ4337",
+    "customer": "PHAM THI MONG KHA",
+    "createTime": "30/08/2026 19:46:49",
+    "finishTime": "31/08/2026 09:22:05",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.TUONGNQ",
+    "contract": "SGAFK3463",
+    "customer": "Bui Thi Huong",
+    "createTime": "04/09/2026 15:30:55",
+    "finishTime": "05/09/2026 11:22:39",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HUNGLQ2",
+    "contract": "SGD183281",
+    "customer": "Thai Thanh Hue",
+    "createTime": "22/08/2026 11:22:58",
+    "finishTime": "24/08/2026 16:19:43",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.ANHNH9",
+    "contract": "SGAED7103",
+    "customer": "VO THI BICH NGOC",
+    "createTime": "17/09/2026 20:47:30",
+    "finishTime": "18/09/2026 16:54:13",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.TUNGDV",
+    "contract": "SGH703602",
+    "customer": "LY PHUONG UYEN",
+    "createTime": "09/09/2026 13:17:28",
+    "finishTime": "09/09/2026 16:49:27",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.MINHNTN",
+    "contract": "SGABG6749",
+    "customer": "Tran Duc Tinh",
+    "createTime": "06/09/2026 17:05:53",
+    "finishTime": "07/09/2026 09:16:34",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.ANHV",
+    "contract": "SGH592970",
+    "customer": "Vo Thi Huong",
+    "createTime": "25/08/2026 14:30:43",
+    "finishTime": "25/08/2026 18:26:27",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.THOTD1",
+    "contract": "SGAEG8293",
+    "customer": "DOAN VAN NGUYEN",
+    "createTime": "17/09/2026 10:38:42",
+    "finishTime": "18/09/2026 10:37:16",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.XUANNV2",
+    "contract": "SGABT2947",
+    "customer": "TRAN ANH LY",
+    "createTime": "12/09/2026 20:54:59",
+    "finishTime": "13/09/2026 16:08:34",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.NAMNP5",
+    "contract": "SGAFN1657",
+    "customer": "HUYNH LE NGOC BINH",
+    "createTime": "04/09/2026 11:51:38",
+    "finishTime": "05/09/2026 10:04:35",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HUYTPG",
+    "contract": "SGAFR7015",
+    "customer": "Tran Huu Thang",
+    "createTime": "12/09/2026 09:51:38",
+    "finishTime": "12/09/2026 12:37:43",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.DONGNH4",
+    "contract": "SGH634971",
+    "customer": "VUONG HUY HOANG",
+    "createTime": "21/08/2026 19:11:09",
+    "finishTime": "23/08/2026 14:33:13",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.THIENNH10",
+    "contract": "SGACS1729",
+    "customer": "TAT MY TRAM",
+    "createTime": "29/08/2026 08:37:51",
+    "finishTime": "29/08/2026 09:59:48",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.DUCNLH",
+    "contract": "SGJ143193",
+    "customer": "Huynh Thi Tuyet Mai",
+    "createTime": "11/09/2026 17:55:32",
+    "finishTime": "12/09/2026 14:22:33",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.MINHNTN",
+    "contract": "SGH890725",
+    "customer": "CONG TY TNHH THUONG MAI DICH VU GIAI TRI N.I.C.E VIP",
+    "createTime": "18/09/2026 09:38:09",
+    "finishTime": "18/09/2026 15:05:47",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.ANNP1",
+    "contract": "SGH795870",
+    "customer": "NGUYEN VAN DUNG",
+    "createTime": "01/09/2026 18:31:46",
+    "finishTime": "02/09/2026 10:16:10",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.BAOMQ1",
+    "contract": "SGD528560",
+    "customer": "Le Trong Dai",
+    "createTime": "31/08/2026 19:52:41",
+    "finishTime": "01/09/2026 11:03:25",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.KHANGHHG",
+    "contract": "SGH858802",
+    "customer": "NGUYEN THI THUY TRINH",
+    "createTime": "02/09/2026 09:29:16",
+    "finishTime": "02/09/2026 09:45:10",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.HAIVV",
+    "contract": "SGAFR6674",
+    "customer": "Tran Trong Dat",
+    "createTime": "05/09/2026 09:27:09",
+    "finishTime": "06/09/2026 09:40:12",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.LUATNT",
+    "contract": "SGH918937",
+    "customer": "LE THI HOAI",
+    "createTime": "10/09/2026 20:05:28",
+    "finishTime": "13/09/2026 10:54:29",
+    "service": "Internet",
+    "reason": "nan"
+  },
+  {
+    "sheet": "1",
+    "employee": "PNC01.NHOVN",
+    "contract": "SGACF0320",
+    "customer": "NGUYEN THI TRANG DAI",
+    "createTime": "30/08/2026 11:32:37",
+    "finishTime": "31/08/2026 11:59:32",
     "service": "Internet",
     "reason": "nan"
   }
